@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Question Evaluation System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>AI-Based Question Set Evaluation System</h1>
+    <p>
+      Welcome! This system helps teachers evaluate examination question papers
+      using AI.
+    </p>
+
+    <form>
+      <h2>Course Information</h2>
+
+      <label for="course">Course Name:</label><br />
+      <input
+        type="text"
+        id="course"
+        placeholder="e.g. Data Structures"
+      /><br /><br />
+
+      <label for="clo">Course Learning Outcomes (CLOs):</label><br />
+      <textarea
+        id="clo"
+        rows="4"
+        placeholder="Enter course learning outcomes"
+      ></textarea
+      ><br /><br />
+
+      <label for="objectives">Programming Objectives:</label><br />
+      <textarea
+        id="objectives"
+        rows="3"
+        placeholder="Enter programming objectives if applicable"
+      ></textarea
+      ><br /><br />
+
+      <label for="targets">Target Question Distribution:</label><br />
+      <input
+        type="text"
+        id="targets"
+        placeholder="e.g. 30% theoretical, 40% analytical"
+      /><br /><br />
+
+      <label for="paper">Question Paper:</label><br />
+      <textarea
+        id="paper"
+        rows="8"
+        placeholder="Paste your question paper here"
+      ></textarea
+      ><br /><br />
+
+      <button type="button" id="evaluateBtn">Evaluate Question Paper</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
