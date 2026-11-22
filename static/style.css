@@ -78,3 +78,16 @@ button {
 button:hover {
   background: #1d4ed8;
 }
+
+#result {
+  display: none;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f4f7fb;
+  border-radius: 10px;
+  border: 1px solid #dce3ed;
+  color: #222;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}

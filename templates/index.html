@@ -3,62 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Question Evaluation System</title>
+    <title>AI-Based Question Set Evaluation System</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
   <body>
-    <h1>AI-Based Question Set Evaluation System</h1>
-    <p>
-      Welcome! This system helps teachers evaluate examination question papers
-      using AI.
-    </p>
+    <div class="container">
+      <h1>AI-Based Question Set Evaluation System</h1>
+      <p>Upload your course documents and question paper for evaluation.</p>
 
-    <form>
-      <h2>Course Information</h2>
+      <form id="evaluationForm">
+        <label for="course">Course Name</label>
+        <input
+          type="text"
+          id="course"
+          name="course"
+          placeholder="Example: Data Structure"
+          required
+        />
 
-      <label for="course">Course Name:</label><br />
-      <input
-        type="text"
-        id="course"
-        placeholder="e.g. Data Structures"
-      /><br /><br />
+        <label for="targets">Target Question Distribution</label>
+        <input
+          type="text"
+          id="targets"
+          name="targets"
+          placeholder="Example: Theoretical 40%, Analytical 30%, Mathematical 30%"
+          required
+        />
 
-      <label for="clo">Course Learning Outcomes (CLOs):</label><br />
-      <textarea
-        id="clo"
-        rows="4"
-        placeholder="Enter course learning outcomes"
-      ></textarea
-      ><br /><br />
+        <label for="question_paper">Question Paper (PDF, DOCX, TXT)</label>
+        <input
+          type="file"
+          id="question_paper"
+          name="question_paper"
+          accept=".pdf,.docx,.txt"
+          required
+        />
 
-      <label for="objectives">Programming Objectives:</label><br />
-      <textarea
-        id="objectives"
-        rows="3"
-        placeholder="Enter programming objectives if applicable"
-      ></textarea
-      ><br /><br />
+        <label for="clo_file">CLO Document (PDF, DOCX, TXT)</label>
+        <input
+          type="file"
+          id="clo_file"
+          name="clo_file"
+          accept=".pdf,.docx,.txt"
+          required
+        />
 
-      <label for="targets">Target Question Distribution:</label><br />
-      <input
-        type="text"
-        id="targets"
-        placeholder="e.g. 30% theoretical, 40% analytical"
-      /><br /><br />
+        <label for="plo_file">PLO Document (PDF, DOCX, TXT)</label>
+        <input
+          type="file"
+          id="plo_file"
+          name="plo_file"
+          accept=".pdf,.docx,.txt"
+          required
+        />
 
-      <label for="paper">Question Paper:</label><br />
-      <textarea
-        id="paper"
-        rows="8"
-        placeholder="Paste your question paper here"
-      ></textarea
-      ><br /><br />
+        <button type="submit" id="evaluateBtn">Evaluate Question Paper</button>
+      </form>
 
-      <button type="button" id="evaluateBtn">Evaluate Question Paper</button>
-    </form>
+      <div id="result"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>

@@ -1,41 +1,65 @@
-document
-  .getElementById("evaluateBtn")
-  .addEventListener("click", async function () {
-    const course = document.getElementById("course").value;
-    const clo = document.getElementById("clo").value;
-    const objectives = document.getElementById("objectives").value;
-    const targets = document.getElementById("targets").value;
-    const paper = document.getElementById("paper").value;
+let isProcessing = false;
+let cooldownActive = false;
 
-    if (course === "" || clo === "" || targets === "" || paper === "") {
-      alert("Please fill in all required fields!");
+document
+  .getElementById("evaluationForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    if (isProcessing || cooldownActive) {
       return;
     }
 
-    const data = {
-      course: course,
-      clo: clo,
-      objectives: objectives,
-      targets: targets,
-      paper: paper,
-    };
+    const form = document.getElementById("evaluationForm");
+    const button = document.getElementById("evaluateBtn");
+    const formData = new FormData(form);
+
+    isProcessing = true;
+    button.disabled = true;
+    button.textContent = "Evaluating... Please wait";
 
     try {
       const response = await fetch("/evaluate", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+        body: formData,
       });
 
       const result = await response.json();
 
-      alert(result.message);
+      if (!response.ok) {
+        alert(result.error || "Evaluation failed!");
+        return;
+      }
 
-      console.log("Backend Response:", result);
+      const resultDiv = document.getElementById("result");
+
+      resultDiv.innerHTML = DOMPurify.sanitize(
+        marked.parse(result.evaluation_report),
+      );
+
+      resultDiv.style.display = "block";
     } catch (error) {
-      alert("Something went wrong!");
+      alert("Unable to connect to the server. Please try again.");
       console.log(error);
+    } finally {
+      isProcessing = false;
+      cooldownActive = true;
+
+      let remainingTime = 60;
+
+      button.textContent = `Please wait ${remainingTime}s`;
+
+      const countdown = setInterval(function () {
+        remainingTime--;
+
+        if (remainingTime > 0) {
+          button.textContent = `Please wait ${remainingTime}s`;
+        } else {
+          clearInterval(countdown);
+          cooldownActive = false;
+          button.disabled = false;
+          button.textContent = "Evaluate Question Paper";
+        }
+      }, 1000);
     }
   });
