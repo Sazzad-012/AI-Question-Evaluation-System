@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previous Reports | AI Question Evaluator</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="pro-dashboard">
+      <aside class="pro-sidebar">
+        <div class="pro-brand">
+          <div class="brand-icon">AI</div>
+          <div>
+            <h2>Question Evaluator</h2>
+            <span>SMART ASSESSMENT</span>
+          </div>
+        </div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="pro-navigation">
+          <a href="/dashboard" class="pro-nav-link">
+            <span class="nav-icon">▦</span>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="/" class="pro-nav-link">
+            <span class="nav-icon">＋</span>
+            <span>Evaluate Question Paper</span>
+          </a>
+
+          <a href="/history" class="pro-nav-link active">
+            <span class="nav-icon">▤</span>
+            <span>Previous Reports</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="sidebar-user">
+            <div class="user-avatar">
+              {{ session.get('user_name', 'T')[0]|upper }}
+            </div>
+
+            <div class="sidebar-user-info">
+              <strong>{{ session.get('user_name', 'Teacher') }}</strong>
+              <span>Teacher Account</span>
+            </div>
+          </div>
+
+          <a href="/logout" class="pro-logout">
+            <span class="nav-icon">↪</span>
+            Logout
+          </a>
+        </div>
+      </aside>
+
+      <main class="pro-main">
+        <header class="pro-topbar">
+          <div>
+            <h1>Previous Reports</h1>
+            <p>View your previously generated AI evaluation reports</p>
+          </div>
+
+          <div class="topbar-profile">
+            <div class="profile-avatar">
+              {{ session.get('user_name', 'T')[0]|upper }}
+            </div>
+
+            <div>
+              <strong>{{ session.get('user_name', 'Teacher') }}</strong>
+              <span>Teacher</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="pro-content">
+          <div class="history-header">
+            <div>
+              <h2>Evaluation History</h2>
+              <p>All your saved examination paper evaluations.</p>
+            </div>
+
+            <a href="/" class="welcome-button"> + New Evaluation </a>
+          </div>
+
+          <div class="history-container">
+            {% if reports %}
+
+            <div class="history-table-wrapper">
+              <table class="history-table">
+                <thead>
+                  <tr>
+                    <th>Course Name</th>
+                    <th>Target Distribution</th>
+                    <th>Evaluation Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {% for report in reports %}
+
+                  <tr>
+                    <td>
+                      <strong>{{ report.course }}</strong>
+                    </td>
+
+                    <td>{{ report.targets }}</td>
+
+                    <td>
+                      {{ report.created_at.strftime('%d %b %Y, %I:%M %p') }}
+                    </td>
+
+                    <td>
+                      <span class="report-status">Completed</span>
+                    </td>
+
+                    <td>
+                      <a
+                        href="{{ url_for('view_report', report_id=report._id) }}"
+                        class="view-report-button"
+                      >
+                        View Report
+                      </a>
+                    </td>
+                  </tr>
+
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+
+            {% else %}
+
+            <div class="history-empty">
+              <div class="empty-icon">▤</div>
+
+              <h3>No Evaluation Reports Yet</h3>
+
+              <p>
+                You haven't generated any evaluation reports. Start your first
+                evaluation to see it here.
+              </p>
+
+              <a href="/" class="welcome-button"> Start Evaluation </a>
+            </div>
+
+            {% endif %}
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

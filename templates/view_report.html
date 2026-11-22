@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluation Report | AI Question Evaluator</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="pro-dashboard">
+      <aside class="pro-sidebar">
+        <div class="pro-brand">
+          <div class="brand-icon">AI</div>
+          <div>
+            <h2>Question Evaluator</h2>
+            <span>SMART ASSESSMENT</span>
+          </div>
+        </div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="pro-navigation">
+          <a href="/dashboard" class="pro-nav-link">
+            <span class="nav-icon">▦</span>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="/" class="pro-nav-link">
+            <span class="nav-icon">＋</span>
+            <span>Evaluate Question Paper</span>
+          </a>
+
+          <a href="/history" class="pro-nav-link active">
+            <span class="nav-icon">▤</span>
+            <span>Previous Reports</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="sidebar-user">
+            <div class="user-avatar">
+              {{ session.get('user_name', 'T')[0]|upper }}
+            </div>
+
+            <div class="sidebar-user-info">
+              <strong>{{ session.get('user_name', 'Teacher') }}</strong>
+              <span>Teacher Account</span>
+            </div>
+          </div>
+
+          <a href="/logout" class="pro-logout">
+            <span class="nav-icon">↪</span>
+            Logout
+          </a>
+        </div>
+      </aside>
+
+      <main class="pro-main">
+        <header class="pro-topbar">
+          <div>
+            <h1>Evaluation Report</h1>
+            <p>Detailed AI analysis of your examination paper</p>
+          </div>
+        </header>
+
+        <section class="pro-content">
+          <div class="history-header">
+            <div>
+              <h2>{{ report.course }}</h2>
+              <p>Target Distribution: {{ report.targets }}</p>
+            </div>
+
+            <a href="/history" class="welcome-button"> Back to Reports </a>
+          </div>
+
+          <div class="report-content">
+            <h2>AI Evaluation Results</h2>
+
+            <div class="report-text">{{ report_html|safe }}</div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | AI Question Evaluator</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="pro-dashboard">
+      <!-- Sidebar -->
+      <aside class="pro-sidebar">
+        <div class="pro-brand">
+          <div class="brand-icon">AI</div>
+          <div>
+            <h2>Question Evaluator</h2>
+            <span>SMART ASSESSMENT</span>
+          </div>
+        </div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="pro-navigation">
+          <a href="/dashboard" class="pro-nav-link active">
+            <span class="nav-icon">▦</span>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="/" class="pro-nav-link">
+            <span class="nav-icon">＋</span>
+            <span>Evaluate Question Paper</span>
+          </a>
+
+          <a href="/history" class="pro-nav-link">
+            <span class="nav-icon">▤</span>
+            <span>Previous Reports</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="sidebar-user">
+            <div class="user-avatar">
+              {{ session.get('user_name', 'T')[0]|upper }}
+            </div>
+            <div class="sidebar-user-info">
+              <strong>{{ session.get('user_name', 'Teacher') }}</strong>
+              <span>Teacher Account</span>
+            </div>
+          </div>
+
+          <a href="/logout" class="pro-logout">
+            <span class="nav-icon">↪</span>
+            Logout
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="pro-main">
+        <!-- Top Navigation -->
+        <header class="pro-topbar">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Overview of your question paper evaluation system</p>
+          </div>
+
+          <div class="topbar-profile">
+            <div class="profile-avatar">
+              {{ session.get('user_name', 'T')[0]|upper }}
+            </div>
+            <div>
+              <strong>{{ session.get('user_name', 'Teacher') }}</strong>
+              <span>Teacher</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <section class="pro-content">
+          <!-- Welcome Banner -->
+          <div class="pro-welcome">
+            <div class="welcome-text">
+              <span class="welcome-tag">TEACHER WORKSPACE</span>
+
+              <h2>Welcome back, {{ session.get('user_name', 'Teacher') }}!</h2>
+
+              <p>
+                Evaluate examination papers, analyze learning outcomes, and
+                manage your reports in one place.
+              </p>
+
+              <a href="/" class="welcome-button"> Start New Evaluation → </a>
+            </div>
+
+            <div class="welcome-decoration">AI</div>
+          </div>
+
+          <!-- Section Heading -->
+          <div class="pro-section-heading">
+            <div>
+              <h2>Quick Access</h2>
+              <p>Choose what you want to do next.</p>
+            </div>
+          </div>
+
+          <!-- Dashboard Cards -->
+          <div class="pro-card-grid">
+            <div class="pro-card">
+              <div class="pro-card-icon evaluation-icon">✎</div>
+
+              <h3>Evaluate Question Paper</h3>
+
+              <p>
+                Upload your examination paper and use AI to classify questions
+                and analyze CLO and PLO alignment.
+              </p>
+
+              <a href="/" class="pro-card-link">
+                Start Evaluation <span>→</span>
+              </a>
+            </div>
+
+            <div class="pro-card">
+              <div class="pro-card-icon reports-icon">▤</div>
+
+              <h3>Previous Reports</h3>
+
+              <p>
+                Access your previously generated evaluation reports and review
+                your question paper analysis.
+              </p>
+
+              <a href="/history" class="pro-card-link">
+                View Reports <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Information Section -->
+          <div class="pro-info-panel">
+            <div class="info-icon">✦</div>
+            <div>
+              <h3>AI-Powered Question Evaluation</h3>
+              <p>
+                Make examination paper evaluation easier with automated question
+                classification and learning outcome analysis.
+              </p>
+            </div>
+          </div>
+
+          <footer class="pro-footer">
+            AI-Based Question Set Evaluation System
+          </footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

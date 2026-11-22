@@ -38,6 +38,7 @@ document
       );
 
       resultDiv.style.display = "block";
+      alert("Evaluation completed successfully!");
     } catch (error) {
       alert("Unable to connect to the server. Please try again.");
       console.log(error);
