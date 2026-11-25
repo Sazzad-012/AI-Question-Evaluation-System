@@ -10,9 +10,9 @@
       href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
+
   <body>
     <div class="pro-dashboard">
-      <!-- Sidebar -->
       <aside class="pro-sidebar">
         <div class="pro-brand">
           <div class="brand-icon">AI</div>
@@ -30,9 +30,9 @@
             <span>Dashboard</span>
           </a>
 
-          <a href="/" class="pro-nav-link">
+          <a href="/evaluate-page" class="pro-nav-link">
             <span class="nav-icon">＋</span>
-            <span>Evaluate Question Paper</span>
+            <span>New Evaluation</span>
           </a>
 
           <a href="/history" class="pro-nav-link">
@@ -46,42 +46,55 @@
             <div class="user-avatar">
               {{ session.get('user_name', 'T')[0]|upper }}
             </div>
+
             <div class="sidebar-user-info">
               <strong>{{ session.get('user_name', 'Teacher') }}</strong>
               <span>Teacher Account</span>
             </div>
           </div>
-
-          <a href="/logout" class="pro-logout">
-            <span class="nav-icon">↪</span>
-            Logout
-          </a>
         </div>
       </aside>
 
-      <!-- Main Content -->
       <main class="pro-main">
-        <!-- Top Navigation -->
         <header class="pro-topbar">
-          <div>
+          <div class="topbar-heading">
             <h1>Dashboard</h1>
             <p>Overview of your question paper evaluation system</p>
           </div>
 
-          <div class="topbar-profile">
-            <div class="profile-avatar">
-              {{ session.get('user_name', 'T')[0]|upper }}
+          <div class="topbar-actions">
+            <div class="topbar-profile">
+              <div class="profile-avatar">
+                {{ session.get('user_name', 'T')[0]|upper }}
+              </div>
+
+              <div class="profile-info">
+                <strong>{{ session.get('user_name', 'Teacher') }}</strong>
+                <span>Teacher</span>
+              </div>
             </div>
-            <div>
-              <strong>{{ session.get('user_name', 'Teacher') }}</strong>
-              <span>Teacher</span>
-            </div>
+
+            <a href="/logout" class="topbar-logout">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M10 17l5-5-5-5" />
+                <path d="M15 12H3" />
+                <path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7" />
+              </svg>
+              Log out
+            </a>
           </div>
         </header>
 
-        <!-- Dashboard Content -->
         <section class="pro-content">
-          <!-- Welcome Banner -->
           <div class="pro-welcome">
             <div class="welcome-text">
               <span class="welcome-tag">TEACHER WORKSPACE</span>
@@ -93,13 +106,14 @@
                 manage your reports in one place.
               </p>
 
-              <a href="/" class="welcome-button"> Start New Evaluation → </a>
+              <a href="/evaluate-page" class="welcome-button">
+                Start New Evaluation →
+              </a>
             </div>
 
             <div class="welcome-decoration">AI</div>
           </div>
 
-          <!-- Section Heading -->
           <div class="pro-section-heading">
             <div>
               <h2>Quick Access</h2>
@@ -107,7 +121,6 @@
             </div>
           </div>
 
-          <!-- Dashboard Cards -->
           <div class="pro-card-grid">
             <div class="pro-card">
               <div class="pro-card-icon evaluation-icon">✎</div>
@@ -119,7 +132,7 @@
                 and analyze CLO and PLO alignment.
               </p>
 
-              <a href="/" class="pro-card-link">
+              <a href="/evaluate-page" class="pro-card-link">
                 Start Evaluation <span>→</span>
               </a>
             </div>
@@ -140,11 +153,12 @@
             </div>
           </div>
 
-          <!-- Information Section -->
           <div class="pro-info-panel">
             <div class="info-icon">✦</div>
+
             <div>
               <h3>AI-Powered Question Evaluation</h3>
+
               <p>
                 Make examination paper evaluation easier with automated question
                 classification and learning outcome analysis.

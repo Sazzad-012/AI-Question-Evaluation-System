@@ -1,6 +1,37 @@
 let isProcessing = false;
 let cooldownActive = false;
+let notificationTimer;
 
+// Show success notification
+function showSuccessNotification() {
+  const notification = document.getElementById("successNotification");
+
+  if (!notification) {
+    return;
+  }
+
+  clearTimeout(notificationTimer);
+
+  notification.classList.add("show");
+
+  notificationTimer = setTimeout(function () {
+    notification.classList.remove("show");
+  }, 4000);
+}
+
+// Hide success notification
+function hideSuccessNotification() {
+  const notification = document.getElementById("successNotification");
+
+  if (!notification) {
+    return;
+  }
+
+  clearTimeout(notificationTimer);
+  notification.classList.remove("show");
+}
+
+// Evaluation form submission
 document
   .getElementById("evaluationForm")
   .addEventListener("submit", async function (event) {
@@ -38,7 +69,15 @@ document
       );
 
       resultDiv.style.display = "block";
-      alert("Evaluation completed successfully!");
+
+      // Show custom success notification
+      showSuccessNotification();
+
+      // Scroll to the generated report
+      resultDiv.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     } catch (error) {
       alert("Unable to connect to the server. Please try again.");
       console.log(error);

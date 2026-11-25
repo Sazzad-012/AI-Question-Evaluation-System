@@ -4,17 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI-Based Question Set Evaluation System</title>
+
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
-  <body>
-    <div class="container">
-      <h1>AI-Based Question Set Evaluation System</h1>
-      <p>Upload your course documents and question paper for evaluation.</p>
 
-      <form id="evaluationForm">
+  <body>
+    <div class="container evaluation-container">
+      <a href="/dashboard" class="back-dashboard"> ← Back to Dashboard </a>
+      <div class="evaluation-heading">
+        <span class="evaluation-tag">AI-POWERED ASSESSMENT</span>
+
+        <h1>AI-Based Question Set Evaluation System</h1>
+
+        <p>
+          Upload your course documents and question paper for intelligent
+          evaluation and learning outcome analysis.
+        </p>
+      </div>
+
+      <form id="evaluationForm" class="evaluation-form">
         <label for="course">Course Name</label>
         <input
           type="text"
@@ -33,37 +44,73 @@
           required
         />
 
-        <label for="question_paper">Question Paper (PDF, DOCX, TXT)</label>
-        <input
-          type="file"
-          id="question_paper"
-          name="question_paper"
-          accept=".pdf,.docx,.txt"
-          required
-        />
+        <div class="file-input-group">
+          <label for="question_paper">Question Paper</label>
+          <span>Upload PDF, DOCX, or TXT</span>
+          <input
+            type="file"
+            id="question_paper"
+            name="question_paper"
+            accept=".pdf,.docx,.txt"
+            required
+          />
+        </div>
 
-        <label for="clo_file">CLO Document (PDF, DOCX, TXT)</label>
-        <input
-          type="file"
-          id="clo_file"
-          name="clo_file"
-          accept=".pdf,.docx,.txt"
-          required
-        />
+        <div class="file-input-group">
+          <label for="clo_file">CLO Document</label>
+          <span>Upload PDF, DOCX, or TXT</span>
+          <input
+            type="file"
+            id="clo_file"
+            name="clo_file"
+            accept=".pdf,.docx,.txt"
+            required
+          />
+        </div>
 
-        <label for="plo_file">PLO Document (PDF, DOCX, TXT)</label>
-        <input
-          type="file"
-          id="plo_file"
-          name="plo_file"
-          accept=".pdf,.docx,.txt"
-          required
-        />
+        <div class="file-input-group">
+          <label for="plo_file">PLO Document</label>
+          <span>Upload PDF, DOCX, or TXT</span>
+          <input
+            type="file"
+            id="plo_file"
+            name="plo_file"
+            accept=".pdf,.docx,.txt"
+            required
+          />
+        </div>
 
         <button type="submit" id="evaluateBtn">Evaluate Question Paper</button>
       </form>
 
-      <div id="result"></div>
+      <!-- Success Notification -->
+      <div
+        id="successNotification"
+        class="success-notification"
+        role="status"
+        aria-live="polite"
+      >
+        <div class="success-notification-icon">✓</div>
+
+        <div class="success-notification-content">
+          <strong>Evaluation Successful!</strong>
+          <span>Your AI evaluation report is ready.</span>
+        </div>
+
+        <button
+          type="button"
+          class="notification-close"
+          onclick="hideSuccessNotification()"
+          aria-label="Close notification"
+        >
+          &times;
+        </button>
+      </div>
+
+      <!-- Generated AI Report -->
+      <section class="generated-result-section">
+        <div id="result" class="generated-result"></div>
+      </section>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>

@@ -10,6 +10,7 @@
       href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
+
   <body>
     <div class="pro-dashboard">
       <aside class="pro-sidebar">
@@ -29,9 +30,9 @@
             <span>Dashboard</span>
           </a>
 
-          <a href="/" class="pro-nav-link">
+          <a href="/evaluate-page" class="pro-nav-link">
             <span class="nav-icon">＋</span>
-            <span>Evaluate Question Paper</span>
+            <span>New Evaluation</span>
           </a>
 
           <a href="/history" class="pro-nav-link active">
@@ -51,19 +52,45 @@
               <span>Teacher Account</span>
             </div>
           </div>
-
-          <a href="/logout" class="pro-logout">
-            <span class="nav-icon">↪</span>
-            Logout
-          </a>
         </div>
       </aside>
 
       <main class="pro-main">
         <header class="pro-topbar">
-          <div>
+          <div class="topbar-heading">
             <h1>Evaluation Report</h1>
             <p>Detailed AI analysis of your examination paper</p>
+          </div>
+
+          <div class="topbar-actions">
+            <div class="topbar-profile">
+              <div class="profile-avatar">
+                {{ session.get('user_name', 'T')[0]|upper }}
+              </div>
+
+              <div class="profile-info">
+                <strong>{{ session.get('user_name', 'Teacher') }}</strong>
+                <span>Teacher</span>
+              </div>
+            </div>
+
+            <a href="/logout" class="topbar-logout">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M10 17l5-5-5-5" />
+                <path d="M15 12H3" />
+                <path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7" />
+              </svg>
+              Log out
+            </a>
           </div>
         </header>
 
@@ -79,7 +106,6 @@
 
           <div class="report-content">
             <h2>AI Evaluation Results</h2>
-
             <div class="report-text">{{ report_html|safe }}</div>
           </div>
         </section>

@@ -10,8 +10,10 @@
       href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
+
   <body>
     <div class="pro-dashboard">
+      <!-- Sidebar -->
       <aside class="pro-sidebar">
         <div class="pro-brand">
           <div class="brand-icon">AI</div>
@@ -29,9 +31,9 @@
             <span>Dashboard</span>
           </a>
 
-          <a href="/" class="pro-nav-link">
+          <a href="/evaluate-page" class="pro-nav-link">
             <span class="nav-icon">＋</span>
-            <span>Evaluate Question Paper</span>
+            <span>New Evaluation</span>
           </a>
 
           <a href="/history" class="pro-nav-link active">
@@ -40,6 +42,7 @@
           </a>
         </nav>
 
+        <!-- Sidebar User -->
         <div class="sidebar-bottom">
           <div class="sidebar-user">
             <div class="user-avatar">
@@ -51,33 +54,51 @@
               <span>Teacher Account</span>
             </div>
           </div>
-
-          <a href="/logout" class="pro-logout">
-            <span class="nav-icon">↪</span>
-            Logout
-          </a>
         </div>
       </aside>
 
+      <!-- Main Content -->
       <main class="pro-main">
+        <!-- Top Navigation -->
         <header class="pro-topbar">
-          <div>
+          <div class="topbar-heading">
             <h1>Previous Reports</h1>
             <p>View your previously generated AI evaluation reports</p>
           </div>
 
-          <div class="topbar-profile">
-            <div class="profile-avatar">
-              {{ session.get('user_name', 'T')[0]|upper }}
+          <div class="topbar-actions">
+            <div class="topbar-profile">
+              <div class="profile-avatar">
+                {{ session.get('user_name', 'T')[0]|upper }}
+              </div>
+
+              <div class="profile-info">
+                <strong>{{ session.get('user_name', 'Teacher') }}</strong>
+                <span>Teacher</span>
+              </div>
             </div>
 
-            <div>
-              <strong>{{ session.get('user_name', 'Teacher') }}</strong>
-              <span>Teacher</span>
-            </div>
+            <a href="/logout" class="topbar-logout">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M10 17l5-5-5-5" />
+                <path d="M15 12H3" />
+                <path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7" />
+              </svg>
+              Log out
+            </a>
           </div>
         </header>
 
+        <!-- Page Content -->
         <section class="pro-content">
           <div class="history-header">
             <div>
@@ -85,7 +106,9 @@
               <p>All your saved examination paper evaluations.</p>
             </div>
 
-            <a href="/" class="welcome-button"> + New Evaluation </a>
+            <a href="/evaluate-page" class="welcome-button">
+              + New Evaluation
+            </a>
           </div>
 
           <div class="history-container">
@@ -105,7 +128,6 @@
 
                 <tbody>
                   {% for report in reports %}
-
                   <tr>
                     <td>
                       <strong>{{ report.course }}</strong>
@@ -130,7 +152,6 @@
                       </a>
                     </td>
                   </tr>
-
                   {% endfor %}
                 </tbody>
               </table>
@@ -148,7 +169,9 @@
                 evaluation to see it here.
               </p>
 
-              <a href="/" class="welcome-button"> Start Evaluation </a>
+              <a href="/evaluate-page" class="welcome-button">
+                Start Evaluation
+              </a>
             </div>
 
             {% endif %}

@@ -342,10 +342,20 @@ def evaluate_with_gemini(course, targets, question_text, clo_text, plo_text):
                 raise
 
 
+
 # HOME PAGE
 @app.route("/")
 def home():
     return redirect(url_for("login"))
+
+# EVALUATION PAGE
+@app.route("/evaluate-page")
+def evaluate_page():
+    if "user_id" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("index.html")
+
 
 
 # EVALUATE QUESTION PAPER
