@@ -4,39 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - AI Question Evaluation System</title>
+
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
-  <body>
-    <div class="login-container">
-      <h2>Welcome Back</h2>
-      <p>Login to your account</p>
 
-      <form action="/login" method="POST">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-        />
+  <body class="auth-body">
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-logo">AI</div>
 
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your password"
-          required
-        />
+        <div class="auth-heading">
+          <h2>Welcome Back!</h2>
+          <p>Sign in to continue to your teacher workspace.</p>
+        </div>
 
-        <button type="submit">Login</button>
-      </form>
+        {% if error %}
+        <div class="login-error">
+          <span class="error-icon">!</span>
+          <span>{{ error }}</span>
+        </div>
+        {% endif %}
 
-      <p>Don't have an account? <a href="/register">Register</a></p>
+        <form action="/login" method="POST" class="auth-form">
+          <div class="auth-input-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="auth-input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="auth-button">
+            Login to Account
+            <span>→</span>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          <p>
+            Don't have an account?
+            <a href="/register">Create an account</a>
+          </p>
+        </div>
+
+        <div class="auth-bottom-text">
+          AI-Based Question Set Evaluation System
+          <br />
+          Developed by <strong>Sazzad Rashid</strong>
+        </div>
+      </div>
     </div>
   </body>
 </html>

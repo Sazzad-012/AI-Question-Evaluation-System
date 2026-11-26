@@ -13,7 +13,25 @@
 
   <body>
     <div class="container evaluation-container">
-      <a href="/dashboard" class="back-dashboard"> ← Back to Dashboard </a>
+      <a href="/dashboard" class="back-dashboard">
+        <span class="back-button-icon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M19 12H5" />
+            <path d="M12 19l-7-7 7-7" />
+          </svg>
+        </span>
+        <span>Back</span>
+      </a>
+
       <div class="evaluation-heading">
         <span class="evaluation-tag">AI-POWERED ASSESSMENT</span>
 
@@ -69,14 +87,13 @@
         </div>
 
         <div class="file-input-group">
-          <label for="plo_file">PLO Document</label>
-          <span>Upload PDF, DOCX, or TXT</span>
+          <label for="plo_file">PLO Document (Optional)</label>
+          <span>Upload PDF, DOCX, or TXT — only if available</span>
           <input
             type="file"
             id="plo_file"
             name="plo_file"
             accept=".pdf,.docx,.txt"
-            required
           />
         </div>
 

@@ -4,48 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register - AI Question Evaluation System</title>
+
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
-  <body>
-    <div class="login-container">
-      <h2>Create Account</h2>
-      <p>Register to use the system</p>
 
-      <form action="/register" method="POST">
-        <label for="name">Full Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Enter your full name"
-          required
-        />
+  <body class="auth-body">
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-logo">AI</div>
 
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-        />
+        <div class="auth-heading">
+          <h2>Create Account</h2>
+          <p>Join us to simplify your question paper evaluation.</p>
+        </div>
 
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Create a password"
-          required
-        />
+        <form action="/register" method="POST" class="auth-form">
+          <div class="auth-input-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
 
-        <button type="submit">Register</button>
-      </form>
+          <div class="auth-input-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
 
-      <p>Already have an account? <a href="/login">Login</a></p>
+          <div class="auth-input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="auth-button">
+            Create Account
+            <span>→</span>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          <p>
+            Already have an account?
+            <a href="/login">Login</a>
+          </p>
+        </div>
+
+        <div class="auth-bottom-text">
+          AI-Based Question Set Evaluation System
+          <br />
+          Developed by <strong>Sazzad Rashid</strong>
+        </div>
+      </div>
     </div>
   </body>
 </html>

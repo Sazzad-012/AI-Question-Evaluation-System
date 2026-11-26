@@ -1,3 +1,4 @@
+
 from flask import Flask, request, jsonify, render_template, session, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from pymongo import MongoClient
@@ -51,7 +52,6 @@ app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 app.config["MAX_CONTENT_LENGTH"] = 10 * 1024 * 1024
 
 
-
 # LOGIN
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -62,7 +62,10 @@ def login():
         password = request.form.get("password")
 
         if not email or not password:
-            return "Please enter your email and password!"
+            return render_template(
+                "login.html",
+                error="Please enter your email and password!"
+            )
 
         user = users_collection.find_one({"email": email})
 
@@ -73,10 +76,12 @@ def login():
 
             return redirect(url_for("dashboard"))
 
-        return "Invalid email or password!"
+        return render_template(
+            "login.html",
+            error="Invalid email or password!"
+        )
 
     return render_template("login.html")
-
 
 
 # REGISTER
@@ -240,10 +245,29 @@ def extract_text(file):
 
 
 # GEMINI AI EVALUATION
-def evaluate_with_gemini(course, targets, question_text, clo_text, plo_text):
+def evaluate_with_gemini(course, targets, question_text, clo_text, plo_text=""):
 
     if client is None:
         raise Exception("Gemini API key is missing.")
+
+    if plo_text.strip():
+
+        plo_instructions = f"""
+        PLO Document:
+        {plo_text}
+
+        3. Identify relevant PLOs and map questions to them where supported by the document.
+        """
+
+    else:
+
+        plo_instructions = """
+        PLO Document: Not provided.
+
+        Do not perform PLO analysis.
+        Do not invent or assume any PLOs.
+        Clearly mention that PLO analysis was skipped because no PLO document was provided.
+        """
 
     prompt = f"""
     You are an expert academic question paper evaluator.
@@ -258,14 +282,13 @@ def evaluate_with_gemini(course, targets, question_text, clo_text, plo_text):
     CLO Document:
     {clo_text}
 
-    PLO Document:
-    {plo_text}
+    {plo_instructions}
 
     Evaluate the question paper.
 
     1. Classify each question as Theoretical, Analytical, or Mathematical.
     2. Match questions with the relevant CLOs.
-    3. Identify relevant PLOs.
+    3. { "Identify relevant PLOs." if plo_text.strip() else "Skip PLO alignment because no PLO document was provided." }
     4. Calculate the actual question distribution.
     5. Compare actual distribution with the target distribution.
     6. Give recommendations.
@@ -342,20 +365,20 @@ def evaluate_with_gemini(course, targets, question_text, clo_text, plo_text):
                 raise
 
 
-
 # HOME PAGE
 @app.route("/")
 def home():
     return redirect(url_for("login"))
 
+
 # EVALUATION PAGE
 @app.route("/evaluate-page")
 def evaluate_page():
+
     if "user_id" not in session:
         return redirect(url_for("login"))
 
     return render_template("index.html")
-
 
 
 # EVALUATE QUESTION PAPER
@@ -375,19 +398,27 @@ def evaluate():
     clo_file = request.files.get("clo_file")
     plo_file = request.files.get("plo_file")
 
+    # Check required text fields
     if not course or not targets:
         return jsonify({
             "error": "Please enter course name and target distribution."
         }), 400
 
-    if not question_file or not clo_file or not plo_file:
+    # Check required documents
+    if (
+        not question_file
+        or not question_file.filename
+        or not clo_file
+        or not clo_file.filename
+    ):
         return jsonify({
-            "error": "Please upload all three documents."
+            "error": "Please upload the Question Paper and CLO Document."
         }), 400
 
     allowed_extensions = {"pdf", "docx", "txt"}
 
-    for file in [question_file, clo_file, plo_file]:
+    # Validate required documents
+    for file in [question_file, clo_file]:
 
         extension = file.filename.rsplit(".", 1)[-1].lower()
 
@@ -396,14 +427,30 @@ def evaluate():
                 "error": "Only PDF, DOCX and TXT files are allowed."
             }), 400
 
+    # Validate optional PLO document only when uploaded
+    if plo_file and plo_file.filename:
+
+        extension = plo_file.filename.rsplit(".", 1)[-1].lower()
+
+        if extension not in allowed_extensions:
+            return jsonify({
+                "error": "PLO document must be PDF, DOCX or TXT."
+            }), 400
+
     print("Course:", course)
     print("Target Distribution:", targets)
 
     try:
 
+        # Extract required documents
         question_text = extract_text(question_file)
         clo_text = extract_text(clo_file)
-        plo_text = extract_text(plo_file)
+
+        # Extract optional PLO document
+        plo_text = ""
+
+        if plo_file and plo_file.filename:
+            plo_text = extract_text(plo_file)
 
         print("Documents extracted successfully!")
         print("Question paper characters:", len(question_text))
