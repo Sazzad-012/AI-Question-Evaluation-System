@@ -10,6 +10,7 @@ import certifi
 import markdown
 import bleach
 import time
+import re
 from docx import Document
 import os
 from google import genai
@@ -52,19 +53,31 @@ app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 app.config["MAX_CONTENT_LENGTH"] = 10 * 1024 * 1024
 
 
+# EMAIL VALIDATION
+def is_valid_email(email):
+    pattern = r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+    return re.fullmatch(pattern, email) is not None
+
+
 # LOGIN
 @app.route("/login", methods=["GET", "POST"])
 def login():
 
     if request.method == "POST":
 
-        email = request.form.get("email")
-        password = request.form.get("password")
+        email = request.form.get("email", "").strip().lower()
+        password = request.form.get("password", "")
 
         if not email or not password:
             return render_template(
                 "login.html",
                 error="Please enter your email and password!"
+            )
+
+        if not is_valid_email(email):
+            return render_template(
+                "login.html",
+                error="Please enter a valid email address!"
             )
 
         user = users_collection.find_one({"email": email})
@@ -90,17 +103,29 @@ def register():
 
     if request.method == "POST":
 
-        name = request.form.get("name")
-        email = request.form.get("email")
-        password = request.form.get("password")
+        name = request.form.get("name", "").strip()
+        email = request.form.get("email", "").strip().lower()
+        password = request.form.get("password", "")
 
         if not name or not email or not password:
-            return "Please fill in all fields!"
+            return render_template(
+                "register.html",
+                error="Please fill in all fields!"
+            )
+
+        if not is_valid_email(email):
+            return render_template(
+                "register.html",
+                error="Please enter a valid email address!"
+            )
 
         existing_user = users_collection.find_one({"email": email})
 
         if existing_user:
-            return "This email is already registered!"
+            return render_template(
+                "register.html",
+                error="This email is already registered!"
+            )
 
         hashed_password = generate_password_hash(password)
 
@@ -510,4 +535,4 @@ def evaluate():
 
 # RUN APPLICATION
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)

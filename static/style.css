@@ -1,7 +1,9 @@
+/* This changes the all elements on the page. */
 * {
   box-sizing: border-box;
 }
 
+/* This changes the whole page. */
 body {
   margin: 0;
   padding: 40px 20px;
@@ -10,12 +12,14 @@ body {
   color: #1e293b;
 }
 
+/* This changes the main heading. */
 h1 {
   text-align: center;
   color: #1d4ed8;
   margin-bottom: 12px;
 }
 
+/* This changes the paragraph text. */
 p {
   text-align: center;
   color: #64748b;
@@ -23,11 +27,13 @@ p {
   line-height: 1.6;
 }
 
+/* This changes the small heading. */
 h2 {
   color: #1e293b;
   margin-top: 0;
 }
 
+/* This changes the form box. */
 form {
   max-width: 700px;
   margin: 0 auto;
@@ -37,6 +43,7 @@ form {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
+/* This changes the form labels. */
 label {
   display: block;
   margin-bottom: 8px;
@@ -44,6 +51,7 @@ label {
 }
 
 input,
+/* This changes the textarea style. */
 textarea {
   width: 100%;
   padding: 12px;
@@ -53,16 +61,19 @@ textarea {
   font: inherit;
 }
 
+/* This changes the textarea style. */
 textarea {
   resize: vertical;
 }
 
 input:focus,
+/* This changes the textarea style. */
 textarea:focus {
   outline: 2px solid #93c5fd;
   border-color: #2563eb;
 }
 
+/* This changes the buttons. */
 button {
   width: 100%;
   padding: 14px;
@@ -75,10 +86,12 @@ button {
   cursor: pointer;
 }
 
+/* This changes how the buttons. */
 button:hover {
   background: #1d4ed8;
 }
 
+/* This changes the evaluation result area. */
 #result {
   display: none;
   margin-top: 25px;
@@ -92,6 +105,7 @@ button:hover {
   overflow-wrap: break-word;
 }
 
+/* This changes the login box. */
 .login-container {
   width: 90%;
   max-width: 400px;
@@ -102,27 +116,32 @@ button:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* This changes the small heading. */
 .login-container h2 {
   text-align: center;
   margin-bottom: 10px;
 }
 
+/* This changes the form box. */
 .login-container form {
   display: flex;
   flex-direction: column;
 }
 
+/* This changes the form labels. */
 .login-container label {
   margin-top: 15px;
   margin-bottom: 5px;
 }
 
+/* This changes the input style. */
 .login-container input {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
+/* This changes the buttons. */
 .login-container button {
   margin-top: 20px;
   padding: 12px;
@@ -133,11 +152,13 @@ button:hover {
   cursor: pointer;
 }
 
+/* This changes the paragraph text. */
 .login-container p {
   text-align: center;
   margin-top: 20px;
 }
 
+/* This changes the dashboard page. */
 .dashboard-container {
   width: 90%;
   max-width: 900px;
@@ -149,10 +170,12 @@ button:hover {
   text-align: center;
 }
 
+/* This changes the main heading. */
 .dashboard-container h1 {
   color: #2563eb;
 }
 
+/* This changes the dashboard action buttons. */
 .dashboard-actions {
   display: flex;
   justify-content: center;
@@ -161,6 +184,7 @@ button:hover {
   margin-top: 30px;
 }
 
+/* This changes the a style. */
 .dashboard-actions a {
   padding: 12px 20px;
   background-color: #2563eb;
@@ -169,10 +193,12 @@ button:hover {
   border-radius: 6px;
 }
 
+/* This changes the a style. */
 .dashboard-actions a:hover {
   background-color: #1d4ed8;
 }
 
+/* This changes the dashboard top area. */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -183,11 +209,13 @@ button:hover {
   padding-bottom: 20px;
 }
 
+/* This changes the main heading. */
 .dashboard-header h1 {
   color: #2563eb;
   font-size: 26px;
 }
 
+/* This changes the logout button. */
 .logout-btn {
   background-color: #dc2626;
   color: white;
@@ -196,11 +224,13 @@ button:hover {
   text-decoration: none;
 }
 
+/* This changes the welcome area. */
 .welcome-section {
   margin: 30px 0;
   text-align: left;
 }
 
+/* This changes the dashboard cards style. */
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -208,6 +238,7 @@ button:hover {
   margin-top: 30px;
 }
 
+/* This changes the dashboard cards. */
 .dashboard-card {
   padding: 25px;
   background-color: #f8fafc;
@@ -216,15 +247,18 @@ button:hover {
   text-align: left;
 }
 
+/* This changes the section heading. */
 .dashboard-card h3 {
   color: #1e40af;
 }
 
+/* This changes the paragraph text. */
 .dashboard-card p {
   color: #555;
   line-height: 1.6;
 }
 
+/* This changes the a style. */
 .dashboard-card a {
   display: inline-block;
   margin-top: 12px;
@@ -235,36 +269,44 @@ button:hover {
   border-radius: 6px;
 }
 
+/* This changes the a style. */
 .dashboard-card a:hover {
   background-color: #1d4ed8;
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 600px) {
+  /* This changes the main heading. */
   .dashboard-header h1 {
     font-size: 21px;
   }
 
+  /* This changes the welcome area. */
   .welcome-section {
     text-align: center;
   }
 }
 
+/* This changes the welcome area. */
 .welcome-section {
   text-align: center;
   margin: 35px 0;
 }
 
+/* This changes the small heading. */
 .welcome-section h2 {
   font-size: 28px;
   color: #1e293b;
   margin-bottom: 12px;
 }
 
+/* This changes the paragraph text. */
 .welcome-section p {
   font-size: 17px;
   color: #64748b;
 }
 
+/* This changes the dashboard cards style. */
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -272,6 +314,7 @@ button:hover {
   margin-top: 35px;
 }
 
+/* This changes the dashboard cards. */
 .dashboard-card {
   display: flex;
   flex-direction: column;
@@ -285,6 +328,7 @@ button:hover {
   text-align: left;
 }
 
+/* This changes the section heading. */
 .dashboard-card h3 {
   font-size: 21px;
   color: #1e40af;
@@ -292,12 +336,14 @@ button:hover {
   margin-bottom: 15px;
 }
 
+/* This changes the paragraph text. */
 .dashboard-card p {
   font-size: 16px;
   color: #64748b;
   line-height: 1.7;
 }
 
+/* This changes the a style. */
 .dashboard-card a {
   align-self: flex-start;
   margin-top: 20px;
@@ -305,37 +351,46 @@ button:hover {
   padding: 12px 20px;
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 650px) {
+  /* This changes the dashboard cards style. */
   .dashboard-cards {
     grid-template-columns: 1fr;
   }
 
+  /* This changes the section heading. */
   .dashboard-card h3 {
     font-size: 19px;
   }
 
+  /* This changes the small heading. */
   .welcome-section h2 {
     font-size: 23px;
   }
 }
 
+/* This changes the section heading. */
 .dashboard-card h3 {
   font-size: 20px;
   white-space: nowrap;
 }
 
+/* This changes the paragraph text. */
 .dashboard-card p {
   font-size: 14px;
   white-space: nowrap;
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 650px) {
   .dashboard-card h3,
+/* This changes the paragraph text. */
   .dashboard-card p {
     white-space: normal;
   }
 }
 
+/* This changes the paragraph text. */
 .dashboard-card p {
   text-align: left !important;
   margin: 0 !important;
@@ -344,8 +399,9 @@ button:hover {
   white-space: normal;
 }
 
-/* WordPress-Style Admin Dashboard */
+/* Old dashboard design styles. */
 
+/* This changes the old dashboard layout. */
 .admin-layout {
   display: flex;
   min-height: 100vh;
@@ -354,6 +410,7 @@ button:hover {
 
 /* Sidebar */
 
+/* This changes the old dashboard left menu. */
 .admin-sidebar {
   width: 250px;
   background-color: #263445;
@@ -363,17 +420,20 @@ button:hover {
   flex-shrink: 0;
 }
 
+/* This changes the sidebar brand style. */
 .sidebar-brand {
   padding: 25px 20px;
   border-bottom: 1px solid #3b4858;
 }
 
+/* This changes the small heading. */
 .sidebar-brand h2 {
   margin: 0;
   font-size: 21px;
   color: white;
 }
 
+/* This changes the sidebar nav style. */
 .sidebar-nav {
   display: flex;
   flex-direction: column;
@@ -381,6 +441,7 @@ button:hover {
 }
 
 .sidebar-nav a,
+/* This changes the a style. */
 .sidebar-bottom a {
   display: block;
   padding: 15px 20px;
@@ -391,16 +452,19 @@ button:hover {
 }
 
 .sidebar-nav a:hover,
+/* This changes the a style. */
 .sidebar-bottom a:hover {
   background-color: #34465c;
   color: white;
 }
 
+/* This changes the a.active style. */
 .sidebar-nav a.active {
   background-color: #2563eb;
   color: white;
 }
 
+/* This changes the sidebar bottom style. */
 .sidebar-bottom {
   margin-top: auto;
   padding-bottom: 20px;
@@ -408,11 +472,13 @@ button:hover {
 
 /* Main Content */
 
+/* This changes the old dashboard main area. */
 .admin-main {
   flex: 1;
   min-width: 0;
 }
 
+/* This changes the old dashboard top bar. */
 .admin-topbar {
   background-color: white;
   min-height: 75px;
@@ -424,21 +490,25 @@ button:hover {
   border-bottom: 1px solid #e2e8f0;
 }
 
+/* This changes the small heading. */
 .admin-topbar h2 {
   margin: 0;
   font-size: 21px;
   color: #334155;
 }
 
+/* This changes the span style. */
 .admin-topbar span {
   color: #64748b;
   font-size: 14px;
 }
 
+/* This changes the admin content style. */
 .admin-content {
   padding: 30px;
 }
 
+/* This changes the admin welcome style. */
 .admin-welcome {
   background-color: white;
   padding: 25px;
@@ -447,35 +517,41 @@ button:hover {
   margin-bottom: 30px;
 }
 
+/* This changes the small heading. */
 .admin-welcome h2 {
   margin: 0 0 10px;
   color: #1e293b;
   font-size: 23px;
 }
 
+/* This changes the paragraph text. */
 .admin-welcome p {
   margin: 0;
   color: #64748b;
   line-height: 1.6;
 }
 
+/* This changes the admin section heading style. */
 .admin-section-heading {
   margin-bottom: 15px;
 }
 
+/* This changes the section heading. */
 .admin-section-heading h3 {
   color: #334155;
   font-size: 18px;
 }
 
-/* Dashboard Widgets */
+/* Styles for the dashboard boxes. */
 
+/* This changes the admin dashboard grid style. */
 .admin-dashboard-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 
+/* This changes the admin widget style. */
 .admin-widget {
   background-color: white;
   padding: 25px;
@@ -484,18 +560,21 @@ button:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
+/* This changes the section heading. */
 .admin-widget h3 {
   margin-top: 0;
   color: #2563eb;
   font-size: 19px;
 }
 
+/* This changes the paragraph text. */
 .admin-widget p {
   color: #64748b;
   line-height: 1.7;
   min-height: 50px;
 }
 
+/* This changes the admin button style. */
 .admin-button {
   display: inline-block;
   margin-top: 15px;
@@ -507,44 +586,55 @@ button:hover {
   transition: background-color 0.2s;
 }
 
+/* This changes the admin button style. */
 .admin-button:hover {
   background-color: #1d4ed8;
 }
 
 /* Responsive Design */
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 800px) {
+  /* This changes the old dashboard left menu. */
   .admin-sidebar {
     width: 200px;
   }
 
+  /* This changes the admin dashboard grid style. */
   .admin-dashboard-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 600px) {
+  /* This changes the old dashboard layout. */
   .admin-layout {
     flex-direction: column;
   }
 
+  /* This changes the old dashboard left menu. */
   .admin-sidebar {
     width: 100%;
   }
 
+  /* This changes the sidebar nav style. */
   .sidebar-nav {
     margin-top: 0;
   }
 
+  /* This changes the sidebar bottom style. */
   .sidebar-bottom {
     margin-top: 0;
     padding-bottom: 0;
   }
 
+  /* This changes the old dashboard top bar. */
   .admin-topbar {
     padding: 15px;
   }
 
+  /* This changes the admin content style. */
   .admin-content {
     padding: 15px;
   }
@@ -554,6 +644,7 @@ button:hover {
    PROFESSIONAL AI EVALUATOR DASHBOARD
 ======================================== */
 
+/* This changes the main dashboard layout. */
 .pro-dashboard {
   display: flex;
   min-height: 100vh;
@@ -563,6 +654,7 @@ button:hover {
 
 /* SIDEBAR */
 
+/* This changes the left sidebar menu. */
 .pro-sidebar {
   width: 260px;
   min-height: 100vh;
@@ -573,6 +665,7 @@ button:hover {
   flex-shrink: 0;
 }
 
+/* This changes the sidebar logo and name. */
 .pro-brand {
   display: flex;
   align-items: center;
@@ -581,6 +674,7 @@ button:hover {
   border-bottom: 1px solid #2b3850;
 }
 
+/* This changes the brand icon style. */
 .brand-icon {
   width: 43px;
   height: 43px;
@@ -593,18 +687,21 @@ button:hover {
   font-weight: bold;
 }
 
+/* This changes the small heading. */
 .pro-brand h2 {
   font-size: 17px;
   margin: 0 0 5px;
   color: #ffffff;
 }
 
+/* This changes the span style. */
 .pro-brand span {
   font-size: 9px;
   letter-spacing: 1.5px;
   color: #94a3b8;
 }
 
+/* This changes the sidebar label style. */
 .sidebar-label {
   padding: 30px 22px 12px;
   font-size: 10px;
@@ -613,6 +710,7 @@ button:hover {
   color: #8291a8;
 }
 
+/* This changes the sidebar menu links. */
 .pro-navigation {
   display: flex;
   flex-direction: column;
@@ -620,6 +718,7 @@ button:hover {
   padding: 0 12px;
 }
 
+/* This changes the sidebar menu button. */
 .pro-nav-link {
   display: flex;
   align-items: center;
@@ -632,29 +731,34 @@ button:hover {
   transition: 0.2s ease;
 }
 
+/* This changes how the sidebar menu button. */
 .pro-nav-link:hover {
   background: #263750;
   color: #ffffff;
 }
 
+/* This changes the pro nav link.active style. */
 .pro-nav-link.active {
   background: #2563eb;
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
+/* This changes the nav icon style. */
 .nav-icon {
   width: 20px;
   text-align: center;
   font-size: 19px;
 }
 
+/* This changes the sidebar bottom style. */
 .sidebar-bottom {
   margin-top: auto;
   padding: 18px 12px;
   border-top: 1px solid #2b3850;
 }
 
+/* This changes the sidebar user style. */
 .sidebar-user {
   display: flex;
   align-items: center;
@@ -663,6 +767,7 @@ button:hover {
 }
 
 .user-avatar,
+/* This changes the profile avatar style. */
 .profile-avatar {
   width: 39px;
   height: 39px;
@@ -676,6 +781,7 @@ button:hover {
   font-weight: bold;
 }
 
+/* This changes the sidebar user info style. */
 .sidebar-user-info {
   display: flex;
   flex-direction: column;
@@ -683,16 +789,19 @@ button:hover {
   min-width: 0;
 }
 
+/* This changes the strong style. */
 .sidebar-user-info strong {
   font-size: 13px;
   color: #ffffff;
 }
 
+/* This changes the span style. */
 .sidebar-user-info span {
   font-size: 11px;
   color: #94a3b8;
 }
 
+/* This changes the sidebar logout button. */
 .pro-logout {
   display: flex;
   align-items: center;
@@ -704,17 +813,20 @@ button:hover {
   border-radius: 8px;
 }
 
+/* This changes how the sidebar logout button. */
 .pro-logout:hover {
   background: #3b2937;
 }
 
 /* MAIN AREA */
 
+/* This changes the main page area. */
 .pro-main {
   flex: 1;
   min-width: 0;
 }
 
+/* This changes the top bar. */
 .pro-topbar {
   min-height: 85px;
   background: #ffffff;
@@ -726,35 +838,41 @@ button:hover {
   border-bottom: 1px solid #e8edf4;
 }
 
+/* This changes the main heading. */
 .pro-topbar h1 {
   margin: 0 0 6px;
   color: #1e293b;
   font-size: 23px;
 }
 
+/* This changes the paragraph text. */
 .pro-topbar p {
   margin: 0;
   color: #94a3b8;
   font-size: 13px;
 }
 
+/* This changes the topbar profile style. */
 .topbar-profile {
   display: flex;
   align-items: center;
   gap: 11px;
 }
 
+/* This changes the div style. */
 .topbar-profile div:last-child {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
+/* This changes the strong style. */
 .topbar-profile strong {
   color: #334155;
   font-size: 13px;
 }
 
+/* This changes the span style. */
 .topbar-profile span {
   color: #94a3b8;
   font-size: 11px;
@@ -762,12 +880,14 @@ button:hover {
 
 /* CONTENT */
 
+/* This changes the main page content. */
 .pro-content {
   max-width: 1500px;
   margin: 0 auto;
   padding: 35px;
 }
 
+/* This changes the welcome box. */
 .pro-welcome {
   position: relative;
   overflow: hidden;
@@ -782,12 +902,14 @@ button:hover {
   box-shadow: 0 8px 22px rgba(37, 99, 235, 0.15);
 }
 
+/* This changes the welcome text. */
 .welcome-text {
   position: relative;
   z-index: 1;
   max-width: 650px;
 }
 
+/* This changes the welcome tag style. */
 .welcome-tag {
   display: inline-block;
   margin-bottom: 15px;
@@ -798,12 +920,14 @@ button:hover {
   letter-spacing: 1.5px;
 }
 
+/* This changes the small heading. */
 .welcome-text h2 {
   margin: 0 0 12px;
   font-size: 28px;
   color: #ffffff;
 }
 
+/* This changes the paragraph text. */
 .welcome-text p {
   margin: 0 0 23px;
   color: #dbeafe;
@@ -811,6 +935,7 @@ button:hover {
   line-height: 1.7;
 }
 
+/* This changes the welcome button. */
 .welcome-button {
   display: inline-block;
   padding: 12px 19px;
@@ -823,11 +948,13 @@ button:hover {
   transition: 0.2s ease;
 }
 
+/* This changes how the welcome button. */
 .welcome-button:hover {
   background: #eff6ff;
   transform: translateY(-2px);
 }
 
+/* This changes the welcome decoration style. */
 .welcome-decoration {
   position: absolute;
   right: 55px;
@@ -840,16 +967,19 @@ button:hover {
 
 /* SECTION HEADING */
 
+/* This changes the pro section heading style. */
 .pro-section-heading {
   margin: 35px 0 20px;
 }
 
+/* This changes the small heading. */
 .pro-section-heading h2 {
   margin: 0 0 7px;
   color: #1e293b;
   font-size: 20px;
 }
 
+/* This changes the paragraph text. */
 .pro-section-heading p {
   margin: 0;
   color: #94a3b8;
@@ -858,12 +988,14 @@ button:hover {
 
 /* DASHBOARD CARDS */
 
+/* This changes the dashboard card layout. */
 .pro-card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 
+/* This changes the dashboard cards. */
 .pro-card {
   padding: 27px;
   background: #ffffff;
@@ -875,11 +1007,13 @@ button:hover {
     box-shadow 0.25s ease;
 }
 
+/* This changes how the dashboard cards. */
 .pro-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
 }
 
+/* This changes the pro card icon style. */
 .pro-card-icon {
   width: 48px;
   height: 48px;
@@ -891,22 +1025,26 @@ button:hover {
   font-size: 23px;
 }
 
+/* This changes the evaluation icon style. */
 .evaluation-icon {
   background: #dbeafe;
   color: #2563eb;
 }
 
+/* This changes the reports icon style. */
 .reports-icon {
   background: #dcfce7;
   color: #16a34a;
 }
 
+/* This changes the section heading. */
 .pro-card h3 {
   margin: 0 0 12px;
   color: #1e293b;
   font-size: 18px;
 }
 
+/* This changes the paragraph text. */
 .pro-card p {
   min-height: 48px;
   margin: 0 0 22px;
@@ -915,6 +1053,7 @@ button:hover {
   line-height: 1.8;
 }
 
+/* This changes the pro card link style. */
 .pro-card-link {
   display: inline-flex;
   align-items: center;
@@ -925,16 +1064,19 @@ button:hover {
   font-weight: bold;
 }
 
+/* This changes the span style. */
 .pro-card-link span {
   transition: transform 0.2s ease;
 }
 
+/* This changes the pro card link style. */
 .pro-card-link:hover span {
   transform: translateX(5px);
 }
 
 /* INFORMATION PANEL */
 
+/* This changes the information box. */
 .pro-info-panel {
   display: flex;
   align-items: center;
@@ -946,6 +1088,7 @@ button:hover {
   border-radius: 12px;
 }
 
+/* This changes the info icon style. */
 .info-icon {
   width: 42px;
   height: 42px;
@@ -959,12 +1102,14 @@ button:hover {
   font-size: 21px;
 }
 
+/* This changes the section heading. */
 .pro-info-panel h3 {
   margin: 0 0 6px;
   color: #334155;
   font-size: 15px;
 }
 
+/* This changes the paragraph text. */
 .pro-info-panel p {
   margin: 0;
   color: #64748b;
@@ -972,6 +1117,7 @@ button:hover {
   line-height: 1.7;
 }
 
+/* This changes the pro footer style. */
 .pro-footer {
   padding: 28px 0 10px;
   color: #94a3b8;
@@ -981,95 +1127,119 @@ button:hover {
 
 /* RESPONSIVE DESIGN */
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 900px) {
+  /* This changes the left sidebar menu. */
   .pro-sidebar {
     width: 225px;
   }
 
+  /* This changes the main page content. */
   .pro-content {
     padding: 25px;
   }
 
+  /* This changes the welcome decoration style. */
   .welcome-decoration {
     right: 20px;
     font-size: 110px;
   }
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 700px) {
+  /* This changes the main dashboard layout. */
   .pro-dashboard {
     flex-direction: column;
   }
 
+  /* This changes the left sidebar menu. */
   .pro-sidebar {
     width: 100%;
     min-height: auto;
   }
 
+  /* This changes the sidebar logo and name. */
   .pro-brand {
     padding: 17px 20px;
   }
 
+  /* This changes the sidebar label style. */
   .sidebar-label {
     padding-top: 18px;
   }
 
+  /* This changes the sidebar menu links. */
   .pro-navigation {
     padding-bottom: 15px;
   }
 
+  /* This changes the sidebar bottom style. */
   .sidebar-bottom {
     margin-top: 0;
   }
 
+  /* This changes the top bar. */
   .pro-topbar {
     padding: 17px 20px;
   }
 
+  /* This changes the main heading. */
   .pro-topbar h1 {
     font-size: 19px;
   }
 
+  /* This changes the main page content. */
   .pro-content {
     padding: 20px;
   }
 
+  /* This changes the welcome box. */
   .pro-welcome {
     padding: 27px 23px;
   }
 
+  /* This changes the small heading. */
   .welcome-text h2 {
     font-size: 23px;
   }
 
+  /* This changes the welcome decoration style. */
   .welcome-decoration {
     right: 5px;
     font-size: 85px;
   }
 
+  /* This changes the dashboard card layout. */
   .pro-card-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 420px) {
+  /* This changes the top bar. */
   .pro-topbar {
     align-items: flex-start;
     flex-direction: column;
   }
 
+  /* This changes the welcome box. */
   .pro-welcome {
     padding: 23px 18px;
   }
 
+  /* This changes the small heading. */
   .welcome-text h2 {
     font-size: 20px;
   }
 
+  /* This changes the welcome decoration style. */
   .welcome-decoration {
     font-size: 65px;
   }
 
+  /* This changes the dashboard cards. */
   .pro-card {
     padding: 22px;
   }
@@ -1079,6 +1249,7 @@ button:hover {
    PREVIOUS REPORTS PAGE
 ======================================== */
 
+/* This changes the history page heading. */
 .history-header {
   display: flex;
   justify-content: space-between;
@@ -1087,18 +1258,21 @@ button:hover {
   margin-bottom: 25px;
 }
 
+/* This changes the small heading. */
 .history-header h2 {
   margin: 0 0 8px;
   color: #1e293b;
   font-size: 22px;
 }
 
+/* This changes the paragraph text. */
 .history-header p {
   margin: 0;
   color: #94a3b8;
   font-size: 13px;
 }
 
+/* This changes the history page content. */
 .history-container {
   background: #ffffff;
   border: 1px solid #e8edf4;
@@ -1107,17 +1281,20 @@ button:hover {
   box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
 }
 
+/* This changes the history table wrapper style. */
 .history-table-wrapper {
   width: 100%;
   overflow-x: auto;
 }
 
+/* This changes the reports table. */
 .history-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
 }
 
+/* This changes the th style. */
 .history-table th {
   padding: 18px 20px;
   background: #f8fafc;
@@ -1128,6 +1305,7 @@ button:hover {
   border-bottom: 1px solid #e8edf4;
 }
 
+/* This changes the td style. */
 .history-table td {
   padding: 19px 20px;
   color: #475569;
@@ -1135,19 +1313,23 @@ button:hover {
   border-bottom: 1px solid #f1f5f9;
 }
 
+/* This changes the tr style. */
 .history-table tbody tr:hover {
   background: #f8fafc;
 }
 
+/* This changes the tr style. */
 .history-table tbody tr:last-child td {
   border-bottom: none;
 }
 
+/* This changes the strong style. */
 .history-table td strong {
   color: #1e293b;
   font-size: 13px;
 }
 
+/* This changes the report status style. */
 .report-status {
   display: inline-block;
   padding: 6px 11px;
@@ -1158,6 +1340,7 @@ button:hover {
   font-weight: 600;
 }
 
+/* This changes the view report button style. */
 .view-report-button {
   display: inline-block;
   padding: 9px 13px;
@@ -1171,6 +1354,7 @@ button:hover {
   transition: 0.2s ease;
 }
 
+/* This changes the view report button style. */
 .view-report-button:hover {
   background: #2563eb;
   color: white;
@@ -1178,11 +1362,13 @@ button:hover {
 
 /* EMPTY HISTORY */
 
+/* This changes the history empty style. */
 .history-empty {
   text-align: center;
   padding: 65px 25px;
 }
 
+/* This changes the empty icon style. */
 .empty-icon {
   width: 65px;
   height: 65px;
@@ -1196,12 +1382,14 @@ button:hover {
   font-size: 30px;
 }
 
+/* This changes the section heading. */
 .history-empty h3 {
   margin: 0 0 10px;
   color: #1e293b;
   font-size: 19px;
 }
 
+/* This changes the paragraph text. */
 .history-empty p {
   max-width: 420px;
   margin: 0 auto 22px;
@@ -1210,13 +1398,16 @@ button:hover {
   line-height: 1.8;
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 700px) {
+  /* This changes the history page heading. */
   .history-header {
     align-items: flex-start;
     flex-direction: column;
   }
 
   .history-table th,
+/* This changes the td style. */
   .history-table td {
     padding: 14px;
   }
@@ -1234,27 +1425,32 @@ button:hover {
 
 .report-text h1,
 .report-text h2,
+/* This changes the section heading. */
 .report-text h3 {
   color: #1e3a5f;
   margin-top: 24px;
   margin-bottom: 12px;
 }
 
+/* This changes the paragraph text. */
 .report-text p {
   margin-bottom: 14px;
 }
 
 .report-text ol,
+/* This changes the ul style. */
 .report-text ul {
   padding-left: 28px;
   margin-bottom: 18px;
 }
 
+/* This changes the li style. */
 .report-text li {
   padding-left: 6px;
   margin-bottom: 10px;
 }
 
+/* This changes the table style. */
 .report-text table {
   width: 100%;
   border-collapse: collapse;
@@ -1262,12 +1458,14 @@ button:hover {
 }
 
 .report-text th,
+/* This changes the td style. */
 .report-text td {
   border: 1px solid #dddddd;
   padding: 10px;
   text-align: left;
 }
 
+/* This changes the th style. */
 .report-text th {
   background: #f0f4f8;
   color: #1e3a5f;
@@ -1282,18 +1480,21 @@ button:hover {
   flex-direction: row;
 }
 
+/* This changes the topbar profile style. */
 .topbar-profile {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
+/* This changes the profile info style. */
 .profile-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
+/* This changes the topbar logout style. */
 .topbar-logout {
   display: inline-flex;
   align-items: center;
@@ -1311,6 +1512,7 @@ button:hover {
   transition: 0.2s ease;
 }
 
+/* This changes the topbar logout style. */
 .topbar-logout:hover {
   background: #f3f4f6;
   border-color: #c5c5c5;
@@ -1333,21 +1535,25 @@ button:hover {
   background: #17243a;
 }
 
+/* This changes the sidebar logo and name. */
 .pro-brand {
   padding: 30px 22px;
 }
 
+/* This changes the sidebar menu links. */
 .pro-navigation {
   gap: 10px;
   padding: 10px 14px;
 }
 
+/* This changes the sidebar menu button. */
 .pro-nav-link {
   padding: 15px 16px;
   border-radius: 10px;
   font-size: 14px;
 }
 
+/* This changes the pro nav link.active style. */
 .pro-nav-link.active {
   background: #2563eb;
 }
@@ -1360,11 +1566,13 @@ button:hover {
   border-bottom: 1px solid #e8edf4;
 }
 
+/* This changes the main heading. */
 .pro-topbar h1 {
   font-size: 24px;
   font-weight: 700;
 }
 
+/* This changes the paragraph text. */
 .pro-topbar p {
   margin: 5px 0 0;
 }
@@ -1378,6 +1586,7 @@ button:hover {
   flex-direction: row;
 }
 
+/* This changes the topbar profile style. */
 .pro-topbar .topbar-profile {
   display: flex;
   align-items: center;
@@ -1385,12 +1594,14 @@ button:hover {
   white-space: nowrap;
 }
 
+/* This changes the profile info style. */
 .pro-topbar .topbar-profile .profile-info {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
+/* This changes the a.topbar-logout style. */
 .pro-topbar a.topbar-logout {
   display: inline-flex;
   align-items: center;
@@ -1407,6 +1618,7 @@ button:hover {
   white-space: nowrap;
 }
 
+/* This changes the a.topbar-logout style. */
 .pro-topbar a.topbar-logout:hover {
   background: #fef2f2;
   border-color: #dc2626;
@@ -1427,10 +1639,12 @@ button:hover {
   box-shadow: 0 8px 25px rgba(37, 99, 235, 0.12);
 }
 
+/* This changes the small heading. */
 .welcome-text h2 {
   font-size: 30px;
 }
 
+/* This changes the paragraph text. */
 .welcome-text p {
   max-width: 600px;
   line-height: 1.8;
@@ -1441,6 +1655,7 @@ button:hover {
   margin: 40px 0 22px;
 }
 
+/* This changes the small heading. */
 .pro-section-heading h2 {
   font-size: 22px;
   font-weight: 700;
@@ -1452,6 +1667,7 @@ button:hover {
   gap: 25px;
 }
 
+/* This changes the dashboard cards. */
 .pro-card {
   min-height: 245px;
   padding: 30px;
@@ -1461,19 +1677,23 @@ button:hover {
   box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
 }
 
+/* This changes how the dashboard cards. */
 .pro-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
 }
 
+/* This changes the section heading. */
 .pro-card h3 {
   font-size: 19px;
 }
 
+/* This changes the paragraph text. */
 .pro-card p {
   line-height: 1.8;
 }
 
+/* This changes the pro card link style. */
 .pro-card-link {
   font-size: 14px;
 }
@@ -1493,49 +1713,61 @@ button:hover {
 
 /* Responsive Design */
 @media (max-width: 900px) {
+  /* This changes the main page content. */
   .pro-content {
     padding: 25px;
   }
 
+  /* This changes the top bar. */
   .pro-topbar {
     padding: 18px 25px;
   }
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 700px) {
+  /* This changes the dashboard card layout. */
   .pro-card-grid {
     grid-template-columns: 1fr;
   }
 
+  /* This changes the main page content. */
   .pro-content {
     padding: 20px;
   }
 
+  /* This changes the top bar. */
   .pro-topbar {
     flex-wrap: wrap;
   }
 
+  /* This changes the topbar actions style. */
   .pro-topbar .topbar-actions {
     flex-wrap: wrap;
     gap: 12px;
   }
 
+  /* This changes the welcome box. */
   .pro-welcome {
     padding: 28px 22px;
   }
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 420px) {
+  /* This changes the top bar. */
   .pro-topbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  /* This changes the topbar actions style. */
   .pro-topbar .topbar-actions {
     width: 100%;
     justify-content: space-between;
   }
 
+  /* This changes the main page content. */
   .pro-content {
     padding: 15px;
   }
@@ -1548,6 +1780,7 @@ body:has(.pro-dashboard) {
   background: #f4f7fb;
 }
 
+/* This changes the main dashboard layout. */
 .pro-dashboard {
   width: 100%;
   min-height: 100vh;
@@ -1561,6 +1794,7 @@ body:has(.pro-dashboard) {
 
 /* Mobile Dashboard Layout Fix */
 @media (max-width: 700px) {
+  /* This changes the main dashboard layout. */
   .pro-dashboard {
     display: flex;
     flex-direction: column;
@@ -1568,6 +1802,7 @@ body:has(.pro-dashboard) {
     min-height: 100vh;
   }
 
+  /* This changes the left sidebar menu. */
   .pro-sidebar {
     width: 100%;
     min-height: auto;
@@ -1575,17 +1810,20 @@ body:has(.pro-dashboard) {
     flex-shrink: 0;
   }
 
+  /* This changes the main page area. */
   .pro-main {
     width: 100%;
     min-width: 0;
     flex: 1;
   }
 
+  /* This changes the top bar. */
   .pro-topbar {
     width: 100%;
     box-sizing: border-box;
   }
 
+  /* This changes the main page content. */
   .pro-content {
     width: 100%;
     max-width: 100%;
@@ -1597,10 +1835,12 @@ body:has(.pro-dashboard) {
    PROFESSIONAL REPORT DESIGN
 ================================= */
 
+/* This changes the report page. */
 .report-page {
   padding: 30px 35px;
 }
 
+/* This changes the report page heading. */
 .report-page-header {
   display: flex;
   justify-content: space-between;
@@ -1609,6 +1849,7 @@ body:has(.pro-dashboard) {
   margin-bottom: 25px;
 }
 
+/* This changes the small heading. */
 .report-page-header h2 {
   margin: 8px 0;
   color: #17243a;
@@ -1616,6 +1857,7 @@ body:has(.pro-dashboard) {
   text-align: left;
 }
 
+/* This changes the paragraph text. */
 .report-page-header p {
   color: #64748b;
   font-size: 14px;
@@ -1623,6 +1865,7 @@ body:has(.pro-dashboard) {
   margin: 8px 0 0;
 }
 
+/* This changes the report label style. */
 .report-label {
   display: inline-block;
   color: #2563eb;
@@ -1632,6 +1875,7 @@ body:has(.pro-dashboard) {
   margin-bottom: 5px;
 }
 
+/* This changes the report summary box. */
 .report-summary-card {
   display: flex;
   align-items: center;
@@ -1643,6 +1887,7 @@ body:has(.pro-dashboard) {
   margin-bottom: 25px;
 }
 
+/* This changes the report summary icon style. */
 .report-summary-icon {
   width: 42px;
   height: 42px;
@@ -1657,12 +1902,14 @@ body:has(.pro-dashboard) {
   font-weight: bold;
 }
 
+/* This changes the section heading. */
 .report-summary-card h3 {
   color: #1e40af;
   font-size: 16px;
   margin: 0 0 6px;
 }
 
+/* This changes the paragraph text. */
 .report-summary-card p {
   color: #64748b;
   font-size: 13px;
@@ -1671,6 +1918,7 @@ body:has(.pro-dashboard) {
   text-align: left;
 }
 
+/* This changes the report details box. */
 .report-content {
   background: #ffffff;
   padding: 30px;
@@ -1679,12 +1927,14 @@ body:has(.pro-dashboard) {
   box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
 }
 
+/* This changes the report content heading style. */
 .report-content-heading {
   padding-bottom: 20px;
   margin-bottom: 25px;
   border-bottom: 1px solid #e5eaf1;
 }
 
+/* This changes the small heading. */
 .report-content-heading h2 {
   color: #17243a;
   font-size: 23px;
@@ -1697,6 +1947,7 @@ body:has(.pro-dashboard) {
 .report-text h1,
 .report-text h2,
 .report-text h3,
+/* This changes the h4 style. */
 .report-text h4 {
   color: #17243a;
   text-align: left;
@@ -1705,27 +1956,32 @@ body:has(.pro-dashboard) {
   margin-bottom: 15px;
 }
 
+/* This changes the main heading. */
 .report-text h1 {
   font-size: 25px;
 }
 
+/* This changes the small heading. */
 .report-text h2 {
   font-size: 21px;
   padding-bottom: 10px;
   border-bottom: 2px solid #eaf0f8;
 }
 
+/* This changes the section heading. */
 .report-text h3 {
   font-size: 18px;
   color: #1d4ed8;
 }
 
+/* This changes the h4 style. */
 .report-text h4 {
   font-size: 16px;
 }
 
 /* Report paragraphs */
 
+/* This changes the paragraph text. */
 .report-text p {
   color: #475569;
   font-size: 14px;
@@ -1737,11 +1993,13 @@ body:has(.pro-dashboard) {
 /* Lists */
 
 .report-text ul,
+/* This changes the ol style. */
 .report-text ol {
   padding-left: 25px;
   margin: 15px 0;
 }
 
+/* This changes the li style. */
 .report-text li {
   color: #475569;
   font-size: 14px;
@@ -1752,6 +2010,7 @@ body:has(.pro-dashboard) {
 
 /* Tables */
 
+/* This changes the table style. */
 .report-text table {
   width: 100%;
   border-collapse: collapse;
@@ -1761,6 +2020,7 @@ body:has(.pro-dashboard) {
   border-radius: 8px;
 }
 
+/* This changes the th style. */
 .report-text th {
   background: #eff4fb;
   color: #17243a;
@@ -1771,6 +2031,7 @@ body:has(.pro-dashboard) {
   border: 1px solid #e2e8f0;
 }
 
+/* This changes the td style. */
 .report-text td {
   color: #475569;
   padding: 14px 15px;
@@ -1780,12 +2041,14 @@ body:has(.pro-dashboard) {
   text-align: left;
 }
 
+/* This changes the tr style. */
 .report-text tr:nth-child(even) {
   background: #f8fafc;
 }
 
 /* Blockquotes */
 
+/* This changes the blockquote style. */
 .report-text blockquote {
   margin: 20px 0;
   padding: 15px 20px;
@@ -1797,6 +2060,7 @@ body:has(.pro-dashboard) {
 
 /* Code blocks */
 
+/* This changes the pre style. */
 .report-text pre {
   background: #17243a;
   color: #e2e8f0;
@@ -1806,6 +2070,7 @@ body:has(.pro-dashboard) {
   margin: 18px 0;
 }
 
+/* This changes the code style. */
 .report-text code {
   background: #eff4fb;
   color: #1d4ed8;
@@ -1814,6 +2079,7 @@ body:has(.pro-dashboard) {
   font-size: 13px;
 }
 
+/* This changes the code style. */
 .report-text pre code {
   background: transparent;
   color: inherit;
@@ -1822,6 +2088,7 @@ body:has(.pro-dashboard) {
 
 /* Horizontal divider */
 
+/* This changes the hr style. */
 .report-text hr {
   border: 0;
   border-top: 1px solid #e2e8f0;
@@ -1830,28 +2097,35 @@ body:has(.pro-dashboard) {
 
 /* Responsive Report */
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 700px) {
+  /* This changes the report page. */
   .report-page {
     padding: 20px 15px;
   }
 
+  /* This changes the report page heading. */
   .report-page-header {
     align-items: flex-start;
     flex-direction: column;
   }
 
+  /* This changes the small heading. */
   .report-page-header h2 {
     font-size: 22px;
   }
 
+  /* This changes the report details box. */
   .report-content {
     padding: 18px 14px;
   }
 
+  /* This changes the small heading. */
   .report-content-heading h2 {
     font-size: 20px;
   }
 
+  /* This changes the table style. */
   .report-text table {
     display: block;
     overflow-x: auto;
@@ -1859,6 +2133,7 @@ body:has(.pro-dashboard) {
   }
 
   .report-text th,
+/* This changes the td style. */
   .report-text td {
     padding: 11px;
   }
@@ -1868,16 +2143,19 @@ body:has(.pro-dashboard) {
    PROFESSIONAL EVALUATION PAGE
 ================================= */
 
+/* This changes the body.evaluation-page style. */
 body.evaluation-page {
   margin: 0;
   padding: 0;
   background: #f4f7fb;
 }
 
+/* This changes the evaluation page content. */
 .evaluation-content {
   padding: 32px 35px;
 }
 
+/* This changes the evaluation page introduction. */
 .evaluation-intro {
   display: flex;
   align-items: center;
@@ -1890,6 +2168,7 @@ body.evaluation-page {
   border-radius: 15px;
 }
 
+/* This changes the evaluation tag style. */
 .evaluation-tag {
   display: inline-block;
   padding: 6px 11px;
@@ -1902,6 +2181,7 @@ body.evaluation-page {
   letter-spacing: 1px;
 }
 
+/* This changes the small heading. */
 .evaluation-intro h2 {
   margin: 0 0 9px;
   color: #17243a;
@@ -1909,6 +2189,7 @@ body.evaluation-page {
   text-align: left;
 }
 
+/* This changes the paragraph text. */
 .evaluation-intro p {
   margin: 0;
   color: #64748b;
@@ -1917,6 +2198,7 @@ body.evaluation-page {
   text-align: left;
 }
 
+/* This changes the evaluation intro icon style. */
 .evaluation-intro-icon {
   display: flex;
   align-items: center;
@@ -1930,6 +2212,7 @@ body.evaluation-page {
   font-size: 30px;
 }
 
+/* This changes the question paper form box. */
 .evaluation-form-card {
   padding: 30px;
   background: #ffffff;
@@ -1938,6 +2221,7 @@ body.evaluation-page {
   box-shadow: 0 5px 20px rgba(30, 50, 80, 0.04);
 }
 
+/* This changes the evaluation card heading style. */
 .evaluation-card-heading {
   display: flex;
   align-items: center;
@@ -1945,6 +2229,7 @@ body.evaluation-page {
   margin-bottom: 24px;
 }
 
+/* This changes the evaluation heading icon style. */
 .evaluation-heading-icon {
   display: flex;
   align-items: center;
@@ -1959,6 +2244,7 @@ body.evaluation-page {
   font-weight: 700;
 }
 
+/* This changes the section heading. */
 .evaluation-card-heading h3 {
   margin: 0 0 5px;
   color: #17243a;
@@ -1966,6 +2252,7 @@ body.evaluation-page {
   text-align: left;
 }
 
+/* This changes the paragraph text. */
 .evaluation-card-heading p {
   margin: 0;
   color: #94a3b8;
@@ -1973,12 +2260,14 @@ body.evaluation-page {
   text-align: left;
 }
 
+/* This changes the form fields. */
 .evaluation-fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
 }
 
+/* This changes the evaluation field style. */
 .evaluation-field {
   display: flex;
   flex-direction: column;
@@ -1986,6 +2275,7 @@ body.evaluation-page {
   min-width: 0;
 }
 
+/* This changes the form labels. */
 .evaluation-field label {
   color: #334155;
   font-size: 13px;
@@ -1993,6 +2283,7 @@ body.evaluation-page {
   text-align: left;
 }
 
+/* This changes the input style. */
 .evaluation-field input {
   width: 100%;
   box-sizing: border-box;
@@ -2006,34 +2297,40 @@ body.evaluation-page {
   transition: 0.2s ease;
 }
 
+/* This changes the input style. */
 .evaluation-field input:focus {
   border-color: #2563eb;
   background: #ffffff;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
+/* This changes the small style. */
 .evaluation-field small {
   color: #94a3b8;
   font-size: 11px;
   line-height: 1.5;
 }
 
+/* This changes the evaluation divider style. */
 .evaluation-divider {
   height: 1px;
   margin: 30px 0;
   background: #e9eef5;
 }
 
+/* This changes the file upload boxes. */
 .evaluation-upload-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 17px;
 }
 
+/* This changes the file upload box. */
 .evaluation-upload-field {
   min-width: 0;
 }
 
+/* This changes the form labels. */
 .evaluation-upload-field label {
   display: flex;
   flex-direction: column;
@@ -2049,11 +2346,13 @@ body.evaluation-page {
   box-sizing: border-box;
 }
 
+/* This changes how the form labels. */
 .evaluation-upload-field label:hover {
   background: #f0f6ff;
   border-color: #2563eb;
 }
 
+/* This changes the upload icon style. */
 .upload-icon {
   display: flex;
   align-items: center;
@@ -2065,24 +2364,28 @@ body.evaluation-page {
   font-size: 19px;
 }
 
+/* This changes the upload title style. */
 .upload-title {
   color: #1e293b;
   font-size: 13px;
   font-weight: 700;
 }
 
+/* This changes the upload description style. */
 .upload-description {
   color: #64748b;
   font-size: 11px;
   line-height: 1.5;
 }
 
+/* This changes the upload format style. */
 .upload-format {
   color: #2563eb;
   font-size: 10px;
   font-weight: 700;
 }
 
+/* This changes the input[type="file"] style. */
 .evaluation-upload-field input[type="file"] {
   display: block;
   width: 100%;
@@ -2091,6 +2394,7 @@ body.evaluation-page {
   font-size: 11px;
 }
 
+/* This changes the input[type="file"] style. */
 .evaluation-upload-field input[type="file"]::file-selector-button {
   padding: 7px 10px;
   margin-right: 7px;
@@ -2101,6 +2405,7 @@ body.evaluation-page {
   cursor: pointer;
 }
 
+/* This changes the evaluation note style. */
 .evaluation-note {
   display: flex;
   align-items: flex-start;
@@ -2112,11 +2417,13 @@ body.evaluation-page {
   border-radius: 9px;
 }
 
+/* This changes the span style. */
 .evaluation-note span {
   color: #2563eb;
   font-size: 17px;
 }
 
+/* This changes the paragraph text. */
 .evaluation-note p {
   margin: 0;
   color: #52647d;
@@ -2125,6 +2432,7 @@ body.evaluation-page {
   text-align: left;
 }
 
+/* This changes the evaluate button. */
 .evaluation-submit {
   display: flex;
   align-items: center;
@@ -2142,53 +2450,66 @@ body.evaluation-page {
   transition: 0.2s ease;
 }
 
+/* This changes how the evaluate button. */
 .evaluation-submit:hover {
   background: #1d4ed8;
   box-shadow: 0 5px 14px rgba(37, 99, 235, 0.2);
 }
 
+/* This changes how the evaluate button. */
 .evaluation-submit:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
+/* This changes the pro footer style. */
 .evaluation-content .pro-footer {
   margin-top: 30px;
 }
 
 /* Responsive layout */
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 900px) {
+  /* This changes the file upload boxes. */
   .evaluation-upload-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 700px) {
+  /* This changes the evaluation page content. */
   .evaluation-content {
     padding: 20px 16px;
   }
 
+  /* This changes the question paper form box. */
   .evaluation-form-card {
     padding: 20px;
   }
 
+  /* This changes the form fields. */
   .evaluation-fields {
     grid-template-columns: 1fr;
   }
 
+  /* This changes the file upload boxes. */
   .evaluation-upload-grid {
     grid-template-columns: 1fr;
   }
 
+  /* This changes the evaluation page introduction. */
   .evaluation-intro {
     padding: 22px;
   }
 
+  /* This changes the small heading. */
   .evaluation-intro h2 {
     font-size: 21px;
   }
 
+  /* This changes the evaluation intro icon style. */
   .evaluation-intro-icon {
     width: 48px;
     height: 48px;
@@ -2196,11 +2517,14 @@ body.evaluation-page {
   }
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 420px) {
+  /* This changes the evaluation intro icon style. */
   .evaluation-intro-icon {
     display: none;
   }
 
+  /* This changes the question paper form box. */
   .evaluation-form-card {
     padding: 16px;
   }
@@ -2210,15 +2534,18 @@ body.evaluation-page {
    GENERATED AI REPORT DESIGN
 ===================================== */
 
+/* This changes the generated result section style. */
 .generated-result-section {
   width: 100%;
   margin-top: 40px;
 }
 
+/* This changes the AI report result. */
 .generated-result:empty {
   display: none;
 }
 
+/* This changes the AI report result. */
 .generated-result {
   width: 100%;
   box-sizing: border-box;
@@ -2234,6 +2561,7 @@ body.evaluation-page {
 
 /* Report headings */
 
+/* This changes the main heading. */
 .generated-result h1 {
   color: #173b75;
   font-size: 27px;
@@ -2243,6 +2571,7 @@ body.evaluation-page {
   border-bottom: 2px solid #2563eb;
 }
 
+/* This changes the small heading. */
 .generated-result h2 {
   color: #173b75;
   font-size: 22px;
@@ -2253,6 +2582,7 @@ body.evaluation-page {
   border-bottom: 1px solid #dbeafe;
 }
 
+/* This changes the section heading. */
 .generated-result h3 {
   color: #1d4ed8;
   font-size: 17px;
@@ -2263,6 +2593,7 @@ body.evaluation-page {
 
 /* Paragraphs and text */
 
+/* This changes the paragraph text. */
 .generated-result p {
   color: #475569;
   font-size: 15px;
@@ -2271,6 +2602,7 @@ body.evaluation-page {
   margin: 12px 0;
 }
 
+/* This changes the strong style. */
 .generated-result strong {
   color: #1e3a8a;
   font-weight: 700;
@@ -2279,11 +2611,13 @@ body.evaluation-page {
 /* Lists */
 
 .generated-result ul,
+/* This changes the ol style. */
 .generated-result ol {
   padding-left: 25px;
   margin: 15px 0 22px;
 }
 
+/* This changes the li style. */
 .generated-result li {
   color: #475569;
   font-size: 15px;
@@ -2294,6 +2628,7 @@ body.evaluation-page {
 
 /* Tables */
 
+/* This changes the table style. */
 .generated-result table {
   width: 100%;
   border-collapse: collapse;
@@ -2304,6 +2639,7 @@ body.evaluation-page {
   font-size: 14px;
 }
 
+/* This changes the th style. */
 .generated-result th {
   background: #eaf2ff;
   color: #173b75;
@@ -2313,6 +2649,7 @@ body.evaluation-page {
   border: 1px solid #dbe3ef;
 }
 
+/* This changes the td style. */
 .generated-result td {
   color: #475569;
   padding: 14px 15px;
@@ -2320,12 +2657,14 @@ body.evaluation-page {
   vertical-align: top;
 }
 
+/* This changes the tr style. */
 .generated-result tr:nth-child(even) {
   background: #f8fafc;
 }
 
 /* Blockquotes and highlighted information */
 
+/* This changes the blockquote style. */
 .generated-result blockquote {
   margin: 20px 0;
   padding: 15px 20px;
@@ -2334,12 +2673,14 @@ body.evaluation-page {
   border-radius: 6px;
 }
 
+/* This changes the paragraph text. */
 .generated-result blockquote p {
   margin: 0;
 }
 
 /* Code blocks */
 
+/* This changes the pre style. */
 .generated-result pre {
   background: #17243a;
   color: #e2e8f0;
@@ -2348,6 +2689,7 @@ body.evaluation-page {
   overflow-x: auto;
 }
 
+/* This changes the code style. */
 .generated-result code {
   background: #eff6ff;
   color: #1d4ed8;
@@ -2357,6 +2699,7 @@ body.evaluation-page {
 
 /* Horizontal separators */
 
+/* This changes the hr style. */
 .generated-result hr {
   border: none;
   border-top: 1px solid #e2e8f0;
@@ -2365,19 +2708,24 @@ body.evaluation-page {
 
 /* Responsive report */
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 700px) {
+  /* This changes the AI report result. */
   .generated-result {
     padding: 20px;
   }
 
+  /* This changes the main heading. */
   .generated-result h1 {
     font-size: 22px;
   }
 
+  /* This changes the small heading. */
   .generated-result h2 {
     font-size: 19px;
   }
 
+  /* This changes the table style. */
   .generated-result table {
     display: block;
     overflow-x: auto;
@@ -2387,6 +2735,7 @@ body.evaluation-page {
 
 /* Success Notification */
 
+/* This changes the success message box. */
 .success-notification {
   position: fixed;
   top: 25px;
@@ -2407,10 +2756,12 @@ body.evaluation-page {
   animation: notificationSlideIn 0.3s ease;
 }
 
+/* This changes the success notification.show style. */
 .success-notification.show {
   display: flex;
 }
 
+/* This changes the success notification icon style. */
 .success-notification-icon {
   width: 38px;
   height: 38px;
@@ -2425,6 +2776,7 @@ body.evaluation-page {
   font-weight: bold;
 }
 
+/* This changes the success notification content style. */
 .success-notification-content {
   display: flex;
   flex-direction: column;
@@ -2432,16 +2784,19 @@ body.evaluation-page {
   flex: 1;
 }
 
+/* This changes the strong style. */
 .success-notification-content strong {
   color: #173b75;
   font-size: 14px;
 }
 
+/* This changes the span style. */
 .success-notification-content span {
   color: #64748b;
   font-size: 12px;
 }
 
+/* This changes the notification close style. */
 .notification-close {
   border: none;
   background: transparent;
@@ -2450,22 +2805,28 @@ body.evaluation-page {
   cursor: pointer;
 }
 
+/* This changes the notification close style. */
 .notification-close:hover {
   color: #1e293b;
 }
 
+/* @keyframes notificationSlideIn */
 @keyframes notificationSlideIn {
+  /* This changes the from style. */
   from {
     opacity: 0;
     transform: translateX(25px);
   }
+  /* This changes the to style. */
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 480px) {
+  /* This changes the success message box. */
   .success-notification {
     top: 12px;
     right: 12px;
@@ -2473,6 +2834,7 @@ body.evaluation-page {
   }
 }
 
+/* This changes the back to dashboard button. */
 .back-dashboard {
   display: inline-flex;
   align-items: center;
@@ -2489,6 +2851,7 @@ body.evaluation-page {
   transition: all 0.2s ease;
 }
 
+/* This changes how the back to dashboard button. */
 .back-dashboard:hover {
   background: #eff6ff;
   border-color: #2563eb;
@@ -2499,6 +2862,7 @@ body.evaluation-page {
    FINAL EVALUATION PAGE DESIGN
 ===================================== */
 
+/* This changes the whole page. */
 body:has(.evaluation-container) {
   margin: 0;
   padding: 35px 25px 60px;
@@ -2506,6 +2870,7 @@ body:has(.evaluation-container) {
   font-family: Arial, sans-serif;
 }
 
+/* This changes the evaluation container style. */
 .evaluation-container {
   width: 100%;
   max-width: 1100px;
@@ -2514,6 +2879,7 @@ body:has(.evaluation-container) {
 
 /* PROFESSIONAL BACK TO DASHBOARD BUTTON */
 
+/* This changes the back to dashboard button. */
 .evaluation-container .back-dashboard {
   display: inline-flex;
   align-items: center;
@@ -2534,6 +2900,7 @@ body:has(.evaluation-container) {
   transition: all 0.25s ease;
 }
 
+/* This changes how the back to dashboard button. */
 .evaluation-container .back-dashboard:hover {
   background: #2563eb;
   color: #ffffff;
@@ -2542,11 +2909,14 @@ body:has(.evaluation-container) {
   transform: translateY(-2px);
 }
 
+/* This changes the back to dashboard button. */
 .evaluation-container .back-dashboard:active {
   transform: translateY(0);
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 600px) {
+  /* This changes the back to dashboard button. */
   .evaluation-container .back-dashboard {
     padding: 10px 16px;
     font-size: 13px;
@@ -2555,12 +2925,14 @@ body:has(.evaluation-container) {
 
 /* Page Heading */
 
+/* This changes the evaluation heading style. */
 .evaluation-heading {
   text-align: center;
   margin: 20px auto 38px;
   max-width: 850px;
 }
 
+/* This changes the evaluation tag style. */
 .evaluation-heading .evaluation-tag {
   display: inline-block;
   padding: 8px 15px;
@@ -2573,6 +2945,7 @@ body:has(.evaluation-container) {
   letter-spacing: 1.2px;
 }
 
+/* This changes the main heading. */
 .evaluation-heading h1 {
   margin: 0 0 13px;
   color: #1d4ed8;
@@ -2581,6 +2954,7 @@ body:has(.evaluation-container) {
   text-align: center;
 }
 
+/* This changes the paragraph text. */
 .evaluation-heading p {
   max-width: 750px;
   margin: 0 auto;
@@ -2592,6 +2966,7 @@ body:has(.evaluation-container) {
 
 /* Evaluation Form */
 
+/* This changes the evaluation form style. */
 .evaluation-container .evaluation-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2609,10 +2984,12 @@ body:has(.evaluation-container) {
 /* Course and Distribution Fields */
 
 .evaluation-form > label,
+/* This changes the input style. */
 .evaluation-form > input {
   grid-column: 1 / -1;
 }
 
+/* This changes the form labels. */
 .evaluation-form > label {
   margin: 5px 0 -5px;
   color: #26364b;
@@ -2620,6 +2997,7 @@ body:has(.evaluation-container) {
   font-weight: 700;
 }
 
+/* This changes the input style. */
 .evaluation-form > input {
   width: 100%;
   padding: 14px 15px;
@@ -2632,6 +3010,7 @@ body:has(.evaluation-container) {
   transition: 0.2s ease;
 }
 
+/* This changes the input style. */
 .evaluation-form > input:focus {
   outline: none;
   border-color: #2563eb;
@@ -2641,6 +3020,7 @@ body:has(.evaluation-container) {
 
 /* Document Upload Fields */
 
+/* This changes the file input group style. */
 .evaluation-form .file-input-group {
   min-width: 0;
   padding: 18px;
@@ -2650,17 +3030,20 @@ body:has(.evaluation-container) {
   transition: 0.2s ease;
 }
 
+/* This changes the file input group style. */
 .evaluation-form .file-input-group:hover {
   border-color: #93b7f5;
   background: #f2f7ff;
 }
 
+/* This changes the form labels. */
 .evaluation-form .file-input-group label {
   margin-bottom: 7px;
   color: #26364b;
   font-size: 14px;
 }
 
+/* This changes the span style. */
 .evaluation-form .file-input-group span {
   display: block;
   margin-bottom: 13px;
@@ -2668,6 +3051,7 @@ body:has(.evaluation-container) {
   font-size: 12px;
 }
 
+/* This changes the input[type="file"] style. */
 .evaluation-form .file-input-group input[type="file"] {
   width: 100%;
   margin: 0;
@@ -2679,6 +3063,7 @@ body:has(.evaluation-container) {
   font-size: 11px;
 }
 
+/* This changes the input[type="file"] style. */
 .evaluation-form .file-input-group input[type="file"]::file-selector-button {
   padding: 7px 10px;
   margin-right: 8px;
@@ -2691,6 +3076,7 @@ body:has(.evaluation-container) {
 
 /* Evaluate Button */
 
+/* This changes the evaluateBtn area. */
 .evaluation-form #evaluateBtn {
   grid-column: 1 / -1;
   width: 100%;
@@ -2706,12 +3092,14 @@ body:has(.evaluation-container) {
   transition: 0.2s ease;
 }
 
+/* This changes the evaluateBtn area. */
 .evaluation-form #evaluateBtn:hover {
   background: #1e40af;
   box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
   transform: translateY(-1px);
 }
 
+/* This changes the evaluateBtn area. */
 .evaluation-form #evaluateBtn:disabled {
   opacity: 0.65;
   cursor: not-allowed;
@@ -2720,12 +3108,14 @@ body:has(.evaluation-container) {
 
 /* Generated Report */
 
+/* This changes the generated result section style. */
 .generated-result-section {
   width: 100%;
   max-width: 1000px;
   margin: 40px auto 0;
 }
 
+/* This changes the result.generated result area. */
 #result.generated-result {
   display: none;
   white-space: normal;
@@ -2739,6 +3129,7 @@ body:has(.evaluation-container) {
 
 /* Success Notification Close Button Fix */
 
+/* This changes the notification close style. */
 .success-notification .notification-close {
   width: auto;
   padding: 0;
@@ -2750,6 +3141,7 @@ body:has(.evaluation-container) {
   box-shadow: none;
 }
 
+/* This changes the notification close style. */
 .success-notification .notification-close:hover {
   background: transparent;
   color: #1e293b;
@@ -2757,23 +3149,29 @@ body:has(.evaluation-container) {
 
 /* Responsive Design */
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 700px) {
+  /* This changes the whole page. */
   body:has(.evaluation-container) {
     padding: 20px 14px 40px;
   }
 
+  /* This changes the evaluation heading style. */
   .evaluation-heading {
     margin: 15px auto 28px;
   }
 
+  /* This changes the main heading. */
   .evaluation-heading h1 {
     font-size: 25px;
   }
 
+  /* This changes the paragraph text. */
   .evaluation-heading p {
     font-size: 14px;
   }
 
+  /* This changes the evaluation form style. */
   .evaluation-container .evaluation-form {
     grid-template-columns: 1fr;
     padding: 23px 18px;
@@ -2782,10 +3180,12 @@ body:has(.evaluation-container) {
   .evaluation-form > label,
   .evaluation-form > input,
   .evaluation-form .file-input-group,
+/* This changes the evaluateBtn area. */
   .evaluation-form #evaluateBtn {
     grid-column: 1;
   }
 
+  /* This changes the result.generated result area. */
   #result.generated-result {
     padding: 20px;
   }
@@ -2807,6 +3207,7 @@ body:has(.evaluation-container) {
   text-align: left;
 }
 
+/* This changes the error icon style. */
 .error-icon {
   display: flex;
   align-items: center;
@@ -2821,17 +3222,20 @@ body:has(.evaluation-container) {
   font-weight: bold;
 }
 
+/* This changes the welcome text. */
 .pro-welcome .welcome-text {
   flex: 1;
   min-width: 0;
 }
 
+/* This changes the paragraph text. */
 .pro-welcome .welcome-text p {
   white-space: nowrap;
   width: 100%;
   font-size: 17px;
 }
 
+/* This changes the main heading. */
 .topbar-heading h1 {
   font-size: 26px;
   font-weight: 700;
@@ -2841,6 +3245,7 @@ body:has(.evaluation-container) {
   letter-spacing: -0.5px;
 }
 
+/* This changes the paragraph text. */
 .topbar-heading p {
   font-size: 14px;
   color: #64748b;
@@ -2853,6 +3258,7 @@ body:has(.evaluation-container) {
    MODERN LOGIN AND REGISTER DESIGN
 ===================================== */
 
+/* This changes the login and registration page background. */
 .auth-body {
   min-height: 100vh;
   margin: 0;
@@ -2864,12 +3270,14 @@ body:has(.evaluation-container) {
   font-family: Arial, sans-serif;
 }
 
+/* This changes the login and registration page layout. */
 .auth-container {
   width: 100%;
   max-width: 460px;
   margin: auto;
 }
 
+/* This changes the login and registration white box. */
 .auth-card {
   width: 100%;
   box-sizing: border-box;
@@ -2880,6 +3288,7 @@ body:has(.evaluation-container) {
   box-shadow: 0 15px 45px rgba(23, 36, 58, 0.1);
 }
 
+/* This changes the login and registration logo. */
 .auth-logo {
   width: 58px;
   height: 58px;
@@ -2895,11 +3304,13 @@ body:has(.evaluation-container) {
   box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
 }
 
+/* This changes the login and registration heading. */
 .auth-heading {
   text-align: center;
   margin-bottom: 30px;
 }
 
+/* This changes the small heading. */
 .auth-heading h2 {
   color: #17243a;
   font-size: 27px;
@@ -2907,6 +3318,7 @@ body:has(.evaluation-container) {
   text-align: center;
 }
 
+/* This changes the paragraph text. */
 .auth-heading p {
   color: #64748b;
   font-size: 14px;
@@ -2915,24 +3327,28 @@ body:has(.evaluation-container) {
   line-height: 1.6;
 }
 
+/* This changes the login and registration form. */
 .auth-form {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
+/* This changes the login and registration input box. */
 .auth-input-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+/* This changes the form labels. */
 .auth-input-group label {
   color: #334155;
   font-size: 14px;
   font-weight: 600;
 }
 
+/* This changes the input style. */
 .auth-input-group input {
   width: 100%;
   box-sizing: border-box;
@@ -2946,16 +3362,19 @@ body:has(.evaluation-container) {
   transition: 0.2s ease;
 }
 
+/* This changes the input style. */
 .auth-input-group input:focus {
   border-color: #2563eb;
   background: #ffffff;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
+/* This changes the input style. */
 .auth-input-group input::placeholder {
   color: #94a3b8;
 }
 
+/* This changes the login and registration button. */
 .auth-button {
   width: 100%;
   margin-top: 8px;
@@ -2974,17 +3393,20 @@ body:has(.evaluation-container) {
   transition: 0.2s ease;
 }
 
+/* This changes how the login and registration button. */
 .auth-button:hover {
   background: #1d4ed8;
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
 }
 
+/* This changes the login and registration bottom links. */
 .auth-footer {
   margin-top: 25px;
   text-align: center;
 }
 
+/* This changes the paragraph text. */
 .auth-footer p {
   color: #64748b;
   font-size: 14px;
@@ -2992,16 +3414,19 @@ body:has(.evaluation-container) {
   text-align: center;
 }
 
+/* This changes the a style. */
 .auth-footer a {
   color: #2563eb;
   font-weight: 600;
   text-decoration: none;
 }
 
+/* This changes the a style. */
 .auth-footer a:hover {
   text-decoration: underline;
 }
 
+/* This changes the text at the bottom of login and registration pages. */
 .auth-bottom-text {
   margin-top: 28px;
   padding-top: 18px;
@@ -3011,11 +3436,14 @@ body:has(.evaluation-container) {
   text-align: center;
 }
 
+/* These settings make the page fit smaller screens like phones and tablets. */
 @media (max-width: 500px) {
+  /* This changes the login and registration white box. */
   .auth-card {
     padding: 32px 23px;
   }
 
+  /* This changes the small heading. */
   .auth-heading h2 {
     font-size: 24px;
   }

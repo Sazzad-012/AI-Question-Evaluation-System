@@ -20,6 +20,12 @@
           <h2>Create Account</h2>
           <p>Join us to simplify your question paper evaluation.</p>
         </div>
+        {% if error %}
+        <div class="login-error">
+          <span class="error-icon">!</span>
+          <span>{{ error }}</span>
+        </div>
+        {% endif %}
 
         <form action="/register" method="POST" class="auth-form">
           <div class="auth-input-group">
@@ -40,6 +46,8 @@
               id="email"
               name="email"
               placeholder="Enter your email"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              title="Please enter a valid email address, e.g. name@example.com"
               required
             />
           </div>
